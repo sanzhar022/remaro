@@ -1,0 +1,2 @@
+import { CategoryForm } from "@/components/admin/category-form";import { createCategory,getAdminCategories } from "@/lib/admin-categories";
+export default async function NewCategory({searchParams}:{searchParams:Promise<{error?:string}>}){const [cats,q]=await Promise.all([getAdminCategories(),searchParams]);return <><h1 className="type-h1 mb-6">Новая категория</h1><CategoryForm action={createCategory} categories={cats} error={q.error}/></>}

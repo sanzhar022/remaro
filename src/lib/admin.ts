@@ -1,0 +1,10 @@
+import "server-only";
+import { notFound, redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
+
+export async function requireAdmin() {
+  const session = await auth();
+  if (!session?.user?.id) redirect("/login");
+  if (session.user.role !== "ADMIN") notFound();
+  return session;
+}

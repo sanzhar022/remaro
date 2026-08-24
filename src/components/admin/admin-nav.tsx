@@ -1,0 +1,3 @@
+import { Boxes, FolderTree, LayoutDashboard, PackageCheck, Store } from "lucide-react"; import Link from "next/link";
+const links=[[/admin$/, "/admin","Обзор",LayoutDashboard],[null,"/admin/products","Товары",Boxes],[null,"/admin/categories","Категории",FolderTree],[null,"/admin/orders","Заказы",PackageCheck],[null,"/","На сайт",Store]] as const;
+export function AdminNav(){return <nav className="flex flex-wrap gap-2">{links.map(([,href,label,Icon])=><Link key={href} href={href} className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-surface px-3 text-sm font-semibold hover:border-primary hover:text-primary"><Icon size={17}/>{label}</Link>)}</nav>}

@@ -1,0 +1,3 @@
+import "dotenv/config";import { prisma } from "../src/lib/prisma";
+async function main(){const[categories,products,specifications,users,orders,items,images,invalidOrders]=await Promise.all([prisma.category.count(),prisma.product.count(),prisma.productSpecification.count(),prisma.user.count(),prisma.order.count(),prisma.orderItem.count(),prisma.productImage.count(),prisma.$queryRaw<Array<{productId:string}>>`SELECT "productId" FROM "ProductImage" GROUP BY "productId" HAVING COUNT(*) > 8`]);console.log(JSON.stringify({counts:{categories,products,specifications,users,orders,items,images},productsOverImageLimit:invalidOrders.length},null,2));}
+main().catch(e=>{console.error(e);process.exitCode=1}).finally(()=>prisma.$disconnect());

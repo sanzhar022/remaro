@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8f6;
+  --foreground: #18201b;
+  --primary: #176b43;
+  --primary-hover: #105536;
+  --secondary: #e8f2eb;
+  --muted: #66706a;
+  --border: #dfe4e0;
+  --destructive: #c93636;
+  --success: #218653;
+  --surface: #ffffff;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --shadow-sm: 0 1px 2px rgb(20 37 27 / 0.05);
+  --shadow-md: 0 10px 30px rgb(20 37 27 / 0.08);
+  --section-spacing: clamp(3rem, 6vw, 5rem);
+  --container-max: 90rem;
+  --container-gutter: clamp(1rem, 3vw, 2.5rem);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-surface: var(--surface);
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input { font: inherit; }
+
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 35%, white);
+  outline-offset: 2px;
+}
+
+.type-h1 {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.type-h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.type-h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.type-small { font-size: 0.875rem; line-height: 1.45; }
+.type-price { font-size: 1.5rem; font-weight: 800; line-height: 1.2; }
+.type-old-price { color: var(--muted); text-decoration: line-through; }
