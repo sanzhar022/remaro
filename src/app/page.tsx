@@ -11,10 +11,10 @@ import { getFeaturedCategories } from "@/lib/categories";
 import { getPopularProducts } from "@/lib/products";
 
 const benefits = [
-  { icon: Truck, title: "Быстрая доставка", text: "Привезём материалы на ваш объект в удобное время" },
-  { icon: ShieldCheck, title: "Проверенные товары", text: "Работаем с надёжными производителями" },
-  { icon: CreditCard, title: "Удобная оплата", text: "Выбирайте подходящий способ оплаты заказа" },
-  { icon: Headphones, title: "Поддержка покупателей", text: "Поможем подобрать материалы для вашего проекта" },
+  { icon: ShieldCheck, title: "Гарантия качества", text: "Только проверенные поставщики" },
+  { icon: Truck, title: "Доставка и самовывоз", text: "Быстрая доставка по Алматы и области" },
+  { icon: Headphones, title: "Поддержка", text: "Поможем с выбором материалов" },
+  { icon: CreditCard, title: "Выгодные условия", text: "Для частных клиентов и компаний" },
 ] as const;
 
 export default async function HomePage() {
@@ -25,23 +25,40 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="bg-[var(--navy-950)] py-10 text-white sm:py-14 lg:py-16">
+      <section className="bg-[var(--navy-950)] py-6 text-white sm:py-8 lg:py-10">
         <Container>
-          <div className="relative isolate overflow-hidden rounded-[var(--radius-xl)] border border-white/10 bg-[var(--navy-900)] px-5 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-            <div className="relative z-10 max-w-3xl">
+          <div className="relative isolate flex min-h-[440px] overflow-hidden rounded-[var(--radius-xl)] border border-white/10 bg-gradient-to-br from-[var(--navy-900)] via-[var(--navy-950)] to-[var(--navy-800)] px-5 py-10 sm:min-h-[500px] sm:px-10 sm:py-14 lg:min-h-[540px] lg:items-center lg:px-14 lg:py-16">
+            <div className="relative z-10 max-w-[46rem]">
               <Badge className="mb-5 border border-primary/30 bg-primary/10 text-primary">Remaro · Алматы</Badge>
-              <h1 className="type-h1 max-w-3xl">Строительные материалы<br className="hidden sm:block" /> для вашего проекта</h1>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">Надёжные материалы для строительства и ремонта. Удобный заказ, доставка и самовывоз в Алматы.</p>
+              <h1 className="type-h1 max-w-3xl text-[1.65rem] min-[375px]:text-[2rem] sm:text-[clamp(2rem,4vw,3.5rem)]">Строительные материалы<br className="hidden sm:block" /> для вашего проекта</h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">Качественные материалы для строительства и ремонта с доставкой и самовывозом в Алматы.</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/catalog" className={buttonClassName({ size: "lg" })}>Перейти в каталог <ArrowRight size={19} aria-hidden="true" /></Link>
-                <Link href="/search" className="inline-flex h-13 items-center justify-center rounded-md border border-white/20 px-6 font-semibold text-white transition hover:border-primary hover:text-primary">Найти товар</Link>
+                <Link href="/catalog" className={buttonClassName({ size: "lg", className: "w-full px-3 text-sm sm:w-auto sm:px-6 sm:text-base" })}>Перейти в каталог <ArrowRight size={19} aria-hidden="true" /></Link>
+                <Link href="/search" className="inline-flex h-13 w-full items-center justify-center rounded-md border border-white/25 px-3 text-sm font-semibold text-white transition hover:border-primary hover:text-primary sm:w-auto sm:px-6 sm:text-base">Смотреть товары</Link>
               </div>
             </div>
-            <div className="absolute -bottom-32 -right-24 -z-10 size-96 rounded-full border-[70px] border-primary/10" aria-hidden="true" />
-            <div className="absolute right-24 top-10 -z-10 hidden h-40 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent lg:block" aria-hidden="true" />
+            <div className="absolute inset-y-0 right-0 -z-10 hidden w-[44%] opacity-70 lg:block" aria-hidden="true">
+              <div className="absolute bottom-16 right-14 h-56 w-72 skew-x-[-12deg] border border-primary/35" />
+              <div className="absolute bottom-28 right-28 h-56 w-72 skew-x-[-12deg] border border-white/15" />
+              <div className="absolute bottom-40 right-44 h-48 w-60 skew-x-[-12deg] border border-primary/20" />
+              <div className="absolute bottom-16 right-14 h-px w-96 origin-right -rotate-[38deg] bg-gradient-to-l from-primary/60 to-transparent" />
+              <div className="absolute right-20 top-20 h-px w-72 rotate-[28deg] bg-gradient-to-l from-white/25 to-transparent" />
+            </div>
           </div>
         </Container>
       </section>
+
+      <Section aria-labelledby="benefits-title" className="py-7 sm:py-9">
+        <h2 id="benefits-title" className="sr-only">Преимущества Remaro</h2>
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 min-[375px]:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-border">
+          {benefits.map(({ icon: Icon, title, text }) => (
+            <article key={title} className="flex min-w-0 gap-3 min-[375px]:flex-col md:flex-row lg:px-5 first:lg:pl-0 last:lg:pr-0">
+              <span className="grid size-10 shrink-0 place-items-center rounded-md bg-[var(--navy-950)] text-primary"><Icon size={20} aria-hidden="true" /></span>
+              <div><h3 className="text-sm font-bold sm:text-base">{title}</h3><p className="mt-1 text-xs leading-5 text-muted sm:text-sm">{text}</p></div>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section aria-labelledby="featured-categories-title">
         <SectionHeader
@@ -58,22 +75,10 @@ export default async function HomePage() {
         <SectionHeader
           title="Популярные товары"
           description="То, что часто выбирают для ремонта и строительства"
+          href="/catalog"
         />
         <span id="popular-products-title" className="sr-only">Популярные товары</span>
         <ProductGrid products={popularProducts.slice(0, 8)} />
-      </Section>
-
-      <Section aria-labelledby="benefits-title" className="pt-5 sm:pt-8">
-        <h2 id="benefits-title" className="sr-only">Преимущества Remaro</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-          {benefits.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow-sm)] transition-shadow hover:shadow-[var(--shadow-md)] sm:p-6">
-              <span className="mb-5 grid size-12 place-items-center rounded-[var(--radius-md)] bg-[var(--navy-950)] text-primary"><Icon size={23} aria-hidden="true" /></span>
-              <h3 className="type-h3">{title}</h3>
-              <p className="type-small mt-2 text-muted">{text}</p>
-            </article>
-          ))}
-        </div>
       </Section>
 
       <Section className="pt-0">
@@ -83,7 +88,7 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      <Section className="pt-0"><div className="rounded-[var(--radius-xl)] bg-primary px-6 py-9 text-center text-[var(--navy-950)] sm:px-10"><h2 className="type-h2">Начните с каталога Remaro</h2><p className="mx-auto mt-2 max-w-2xl text-[var(--navy-900)]/75">Выберите материалы для следующего этапа вашего проекта.</p><Link href="/catalog" className="mt-6 inline-flex h-12 items-center gap-2 rounded-md bg-[var(--navy-950)] px-6 font-semibold text-white hover:bg-[var(--navy-800)]">Открыть каталог <ArrowRight size={18} /></Link></div></Section>
+      <Section className="pt-0"><div className="flex flex-col items-start justify-between gap-6 rounded-[var(--radius-xl)] bg-[var(--navy-900)] px-6 py-8 text-white sm:px-9 lg:flex-row lg:items-center"><div><h2 className="type-h2">Материалы для следующего этапа проекта</h2><p className="mt-2 max-w-2xl text-sm text-white/65 sm:text-base">Соберите заказ в каталоге — оформление займёт несколько минут.</p></div><Link href="/catalog" className={buttonClassName({ size: "lg", className: "shrink-0" })}>Открыть каталог <ArrowRight size={18} /></Link></div></Section>
     </>
   );
 }
