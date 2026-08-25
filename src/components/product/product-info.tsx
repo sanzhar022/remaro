@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 import { ProductPurchaseControls } from "@/components/cart/product-purchase-controls";
 import { FavoriteButton } from "@/components/favorites/favorite-button";
 import { Badge } from "@/components/ui/badge";
@@ -26,13 +25,6 @@ export function ProductInfo({ product }: ProductInfoProps) {
       </div>
 
       <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">{product.name}</h1>
-      <p className="type-small mt-4 flex items-center gap-1.5 text-muted">
-        <Star size={17} className="fill-[#e6a817] text-[#e6a817]" aria-hidden="true" />
-        <span className="font-bold text-foreground">{product.rating.toFixed(1)}</span>
-        <span aria-hidden="true">·</span>
-        <span>{product.reviewCount} отзывов</span>
-      </p>
-
       <div className="mt-5 flex flex-wrap gap-2">
         {product.isHit && <Badge>Хит</Badge>}
         {product.isNew && <Badge variant="new">Новинка</Badge>}
@@ -41,7 +33,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
       <div className="mt-7 border-y border-border py-6">
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <span className="text-3xl font-extrabold sm:text-4xl">{formatPrice(product.price)}</span>
+          <span className="text-3xl font-bold tracking-tight text-[var(--navy-900)] sm:text-4xl">{formatPrice(product.price)}</span>
           <span className="text-muted">за {product.unit}</span>
           {product.oldPrice && <span className="type-old-price w-full text-base">{formatPrice(product.oldPrice)}</span>}
         </div>

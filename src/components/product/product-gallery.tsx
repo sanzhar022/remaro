@@ -14,7 +14,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
   return (
     <div className="min-w-0">
-      <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[var(--radius-xl)] border border-border bg-[#f1f4f1] text-primary/50 shadow-[var(--shadow-sm)]">
+      <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[var(--radius-xl)] border border-border bg-[#f3f4f6] text-[var(--navy-900)]/35 shadow-[var(--shadow-sm)]">
         {primaryImage ? (
           <Image src={primaryImage} alt={productName} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-contain p-8" />
         ) : (

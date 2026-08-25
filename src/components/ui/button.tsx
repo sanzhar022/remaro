@@ -4,10 +4,10 @@ export type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "des
 export type ButtonSize = "sm" | "md" | "lg";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-primary text-white shadow-[var(--shadow-sm)] hover:bg-primary-hover",
-  secondary: "bg-secondary text-primary hover:bg-[#dcebe1]",
-  outline: "border border-border bg-surface text-foreground hover:border-primary hover:bg-secondary",
-  ghost: "text-foreground hover:bg-secondary hover:text-primary",
+  primary: "bg-primary text-[var(--navy-950)] shadow-[var(--shadow-sm)] hover:bg-primary-hover",
+  secondary: "bg-[var(--navy-900)] text-white hover:bg-[var(--navy-800)]",
+  outline: "border border-border bg-surface text-foreground hover:border-primary hover:bg-[#fffaf0]",
+  ghost: "text-foreground hover:bg-secondary hover:text-[var(--navy-900)]",
   destructive: "bg-destructive text-white hover:bg-[#a92b2b]",
 };
 

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { absoluteUrl, siteUrl } from "@/lib/site";
 import "./globals.css";
+
+const montserrat = Montserrat({ subsets: ["latin", "cyrillic"], variable: "--font-montserrat", display: "swap" });
 
 export const metadata: Metadata = {
   title: { default: "Remaro — строительные материалы", template: "%s | Remaro" },
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru-KZ">
-      <body className="flex min-h-screen flex-col">
+      <body className={`${montserrat.variable} flex min-h-screen flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

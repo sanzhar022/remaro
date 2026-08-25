@@ -16,10 +16,10 @@ export function HeaderSearch() {
   };
 
   return (
-    <form role="search" onSubmit={submit} className="order-3 flex w-full lg:order-none lg:flex-1">
+    <form role="search" onSubmit={submit} className="flex w-full">
       <label htmlFor="site-search" className="sr-only">Поиск товаров</label>
-      <Input id="site-search" name="q" type="search" placeholder="Найти товары для стройки и ремонта" className="min-w-0 rounded-r-none border-r-0 focus:relative focus:z-10" />
-      <IconButton type="submit" aria-label="Найти" title="Найти" className="rounded-l-none bg-primary text-white hover:bg-primary-hover hover:text-white"><Search size={20} aria-hidden="true" /></IconButton>
+      <Input id="site-search" name="q" type="search" placeholder="Поиск по каталогу" className="min-w-0 rounded-r-none border-white/10 bg-white text-foreground shadow-none focus:relative focus:z-10" />
+      <IconButton type="submit" aria-label="Найти" title="Найти" className="rounded-l-none border-primary bg-primary text-[var(--navy-950)] hover:bg-primary-hover"><Search size={20} aria-hidden="true" /></IconButton>
     </form>
   );
 }
