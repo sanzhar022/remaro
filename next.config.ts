@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: { remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }] },
+  images: {
+    qualities: [75, 92],
+    remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
+  },
   async headers() {
     const csp = [
       "default-src 'self'", "base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'",

@@ -22,7 +22,20 @@ export async function getProductsByCategoryId(categoryId: string): Promise<Produ
 }
 
 export async function getPopularProducts(): Promise<Product[]> {
-  const products = await prisma.product.findMany({ where: { isPopular: true }, include: { specifications, images } });
+  const products = await prisma.product.findMany({
+    where: {
+      isPopular: true,
+      NOT: {
+        OR: [
+          { id: { startsWith: "admin-test-" } },
+          { slug: { startsWith: "test-" } },
+          { slug: { contains: "admin-test" } },
+          { name: "Тестовый товар Remaro" },
+        ],
+      },
+    },
+    include: { specifications, images },
+  });
   return products.map(mapPrismaProduct);
 }
 

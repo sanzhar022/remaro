@@ -1,8 +1,9 @@
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/generated/prisma/client";
 import { serverEnv } from "@/lib/env";
+import { withVerifiedPostgresTls } from "@/lib/database-url";
 
-const connectionString = serverEnv.DATABASE_URL;
+const connectionString = withVerifiedPostgresTls(serverEnv.DATABASE_URL);
 
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 const adapter = new PrismaPg({ connectionString });
