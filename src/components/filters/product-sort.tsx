@@ -7,7 +7,6 @@ const options: { value: ProductSort; label: string }[] = [
   { value: "popular", label: "По популярности" },
   { value: "price-asc", label: "Сначала дешевле" },
   { value: "price-desc", label: "Сначала дороже" },
-  { value: "rating", label: "По рейтингу" },
   { value: "newest", label: "Новинки" },
 ];
 
@@ -15,7 +14,8 @@ export function ProductSortSelect() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const current = searchParams.get("sort") ?? "popular";
+  const requested = searchParams.get("sort");
+  const current = options.find((option) => option.value === requested)?.value ?? "popular";
 
   const changeSort = (sort: string) => {
     const next = new URLSearchParams(searchParams.toString());

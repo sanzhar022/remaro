@@ -12,8 +12,9 @@ export interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const discount = product.oldPrice
-    ? Math.round((1 - product.price / product.oldPrice) * 100)
+  const oldPrice = product.oldPrice !== undefined && product.oldPrice > product.price ? product.oldPrice : undefined;
+  const discount = oldPrice
+    ? Math.round(((oldPrice - product.price) / oldPrice) * 100)
     : undefined;
   const isAvailable = product.stock > 0;
 
@@ -23,9 +24,9 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link href={`/product/${product.slug}`} aria-label={`Открыть товар: ${product.name}`} className="block focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-primary/25">
           <div className="relative grid aspect-square place-items-center bg-[#f3f4f6] text-[var(--navy-900)]/35">
             {product.images[0] ? (
-              <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw" className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]" />
+              <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 375px) 50vw, 100vw" className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]" />
             ) : (
-              <ImageIcon className="size-14 transition-transform duration-200 group-hover:scale-105" strokeWidth={1.35} aria-hidden="true" />
+              <div className="flex max-w-44 flex-col items-center px-4 text-center"><ImageIcon className="size-10" strokeWidth={1.35} aria-hidden="true" /><span className="mt-3 text-xs font-semibold leading-5 text-muted">Изображение товара<br />скоро появится</span></div>
             )}
           </div>
         </Link>
@@ -37,7 +38,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <FavoriteButton productId={product.id} className="absolute right-3 top-3 shadow-[var(--shadow-sm)]" />
       </div>
 
-      <div className="flex flex-1 flex-col p-3.5 sm:p-5">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted sm:text-xs">{product.brand}</p>
         <Link href={`/product/${product.slug}`} className="line-clamp-2 min-h-[2.7rem] text-sm font-semibold leading-5 transition-colors hover:text-[var(--navy-800)] sm:min-h-[3.05rem] sm:text-base sm:leading-6">
           {product.name}
@@ -46,9 +47,9 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="mt-auto pt-5">
           <p className={`mb-2 text-xs font-semibold ${isAvailable ? "text-success" : "text-destructive"}`}>{isAvailable ? "В наличии" : "Нет в наличии"}</p>
           <div className="flex min-h-12 flex-wrap items-baseline gap-x-2">
-            <span className="type-price">{formatPrice(product.price)}</span>
+            <span className="type-price break-words text-xl sm:text-2xl">{formatPrice(product.price)}</span>
             <span className="type-small text-muted">/ {product.unit}</span>
-            {product.oldPrice && <span className="type-old-price w-full text-sm">{formatPrice(product.oldPrice)}</span>}
+            {oldPrice && <span className="type-old-price w-full text-sm">{formatPrice(oldPrice)}</span>}
           </div>
           <AddToCartButton product={product} className="mt-2 w-full" />
         </div>

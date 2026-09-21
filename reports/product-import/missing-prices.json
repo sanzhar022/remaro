@@ -1,0 +1,2345 @@
+[
+  {
+    "sourceRows": [
+      48
+    ],
+    "sku": "L0006",
+    "name": "LEGAR Дуб Арабика",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      49
+    ],
+    "sku": "L0003",
+    "name": "LEGAR Дуб Шервуд",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      50
+    ],
+    "sku": "L0005",
+    "name": "LEGAR Дуб Локко",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      51
+    ],
+    "sku": "REM-53792460A7B23552",
+    "name": "Ламинат LEGAR",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "SAME_NAME_IDENTITY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      52
+    ],
+    "sku": "L0004",
+    "name": "LEGAR Дуб Фикс",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      53
+    ],
+    "sku": "CM-403",
+    "name": "COSMIC Alvara",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      54
+    ],
+    "sku": "CM-404",
+    "name": "COSMIC Nevada",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      55
+    ],
+    "sku": "REM-C19EC17860C33538",
+    "name": "Ламинат COSMIC",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      56
+    ],
+    "sku": "CM-05",
+    "name": "COSMIC Roland",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      57
+    ],
+    "sku": "LG-087",
+    "name": "LEGAR RAY AURA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      58
+    ],
+    "sku": "LG-081",
+    "name": "LEGAR EVENT",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      59
+    ],
+    "sku": "LG-084",
+    "name": "Ламинат LEGAR",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "SAME_NAME_IDENTITY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      60
+    ],
+    "sku": "LG-088",
+    "name": "LEGAR MONTANA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      61
+    ],
+    "sku": "LG-085",
+    "name": "LEGAR LIORA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      62
+    ],
+    "sku": "LG-083",
+    "name": "LEGAR NEVA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      63
+    ],
+    "sku": "CM-601",
+    "name": "COSMIC Rustic",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      64
+    ],
+    "sku": "CM-605",
+    "name": "COSMIC Meteor",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      65
+    ],
+    "sku": "CM-304",
+    "name": "COSMIC Avenu",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      66
+    ],
+    "sku": "CM-602",
+    "name": "COSMIC Canyon",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      67
+    ],
+    "sku": "CM-303",
+    "name": "COSMIC Cantry",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      68
+    ],
+    "sku": "CM-300",
+    "name": "COSMIC Oak",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      69
+    ],
+    "sku": "JPF12883",
+    "name": "Керамогранит JPF12883 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      70
+    ],
+    "sku": "JP12672",
+    "name": "Керамогранит JP12672 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      71
+    ],
+    "sku": "JP12662",
+    "name": "Керамогранит JP12662 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      72
+    ],
+    "sku": "JPF12887",
+    "name": "Керамогранит JPF12887 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      73
+    ],
+    "sku": "JPF12895",
+    "name": "Керамогранит JPF12895 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      74
+    ],
+    "sku": "JP12669",
+    "name": "Керамогранит JP12669 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      75
+    ],
+    "sku": "JPF12882",
+    "name": "Керамогранит JPF12882 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      76
+    ],
+    "sku": "JP12668",
+    "name": "Керамогранит JP12668 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      77
+    ],
+    "sku": "JP12661",
+    "name": "Керамогранит JP12661 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      78
+    ],
+    "sku": "JPF12889",
+    "name": "Керамогранит JPF12889 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      79
+    ],
+    "sku": "JPF12890",
+    "name": "Керамогранит JPF12890 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      80
+    ],
+    "sku": "JP12665",
+    "name": "Керамогранит JP12665 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      81
+    ],
+    "sku": "MTL61211",
+    "name": "Керамогранит MTL61211 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      82
+    ],
+    "sku": "MTL61215",
+    "name": "Керамогранит MTL61215 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      83
+    ],
+    "sku": "MTC61201",
+    "name": "Керамогранит MTC61201 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      84
+    ],
+    "sku": "MTL61210",
+    "name": "Керамогранит MTL61210 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      85
+    ],
+    "sku": "MTL61212",
+    "name": "Керамогранит MTL61212 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      86
+    ],
+    "sku": "MTC61207",
+    "name": "Керамогранит MTC61207 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      87
+    ],
+    "sku": "JPF12881",
+    "name": "Керамогранит JPF12881 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      88
+    ],
+    "sku": "JPF12896",
+    "name": "Керамогранит JPF12896 1200×600 мм",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      126
+    ],
+    "sku": "69600-11",
+    "name": "Смеситель для раковины Delano 69600-11",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "CATEGORY NOT FOUND",
+      "CATEGORY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      144
+    ],
+    "sku": "REM-E35E9F125ECD3AF0",
+    "name": "Смеситель для умывальника",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "CATEGORY NOT FOUND",
+      "CATEGORY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      145
+    ],
+    "sku": "REM-A7952DD0FCC10DEE",
+    "name": "Смеситель для умывальника",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "CATEGORY NOT FOUND",
+      "CATEGORY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      154
+    ],
+    "sku": "X5700-10",
+    "name": "Смеситель для кухни с гибким изливом",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      184
+    ],
+    "sku": "39420000",
+    "name": "Раковина Grohe Bau Ceramic 65 см 39420000",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      185
+    ],
+    "sku": "PA3000",
+    "name": "Раковина напольная монолитная Creo Paris PA3000",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      217
+    ],
+    "sku": "PL-PVC-DP-85",
+    "name": "Плинтус ПВХ Dekor Plast 85 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      291,
+      496
+    ],
+    "sku": "104161239",
+    "name": "Ракушечник светлый 498x980 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      292,
+      497
+    ],
+    "sku": "107229726",
+    "name": "Гибралтар 500x980 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      293,
+      498
+    ],
+    "sku": "107229772",
+    "name": "Кирпич 499x962 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      294,
+      499
+    ],
+    "sku": "135865872",
+    "name": "Мята 480x955 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      295,
+      500
+    ],
+    "sku": "105463591",
+    "name": "Кофейные зерна 955x480 мм TP10014001",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      296,
+      501
+    ],
+    "sku": "115182379",
+    "name": "3D RAIL Дуб антик 120x2800 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      297,
+      502
+    ],
+    "sku": "115154502",
+    "name": "3D RAIL Махагон 120x2800 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      298,
+      503
+    ],
+    "sku": "115154497",
+    "name": "3D RAIL Ясень серый 120x2800 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      299,
+      504
+    ],
+    "sku": "112798185",
+    "name": "Панель 120x2800 мм серо-белая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      300,
+      505
+    ],
+    "sku": "112769102",
+    "name": "Панель 120x2800 мм коричневая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      301,
+      506
+    ],
+    "sku": "136162092",
+    "name": "3D RAIL Вишня 120x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      305,
+      510
+    ],
+    "sku": "106879796",
+    "name": "539212 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      306,
+      511
+    ],
+    "sku": "107744537",
+    "name": "1026 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      307,
+      512
+    ],
+    "sku": "107744540",
+    "name": "632/1 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      308,
+      513
+    ],
+    "sku": "107744572",
+    "name": "170/1 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      309,
+      514
+    ],
+    "sku": "104880320",
+    "name": "Сеньора 632/1 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      310,
+      515
+    ],
+    "sku": "107227535",
+    "name": "539245 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      311,
+      516
+    ],
+    "sku": "117027465",
+    "name": "Сорбона 564963 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      312,
+      517
+    ],
+    "sku": "101663101",
+    "name": "Голубая Лагуна 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      313,
+      518
+    ],
+    "sku": "101662971",
+    "name": "Кристалл 1082 250x2700 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      315,
+      520
+    ],
+    "sku": "149464007",
+    "name": "MEX-910 240x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      316,
+      521
+    ],
+    "sku": "140022658",
+    "name": "MEX-908 150x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      317,
+      522
+    ],
+    "sku": "148529662",
+    "name": "MEX-950 150x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      318,
+      523
+    ],
+    "sku": "148511876",
+    "name": "MEX-960 235x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      319,
+      524
+    ],
+    "sku": "115755491",
+    "name": "Pn902 150x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      320,
+      525
+    ],
+    "sku": "167338417",
+    "name": "3D панели рейки 300x300 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      321,
+      526
+    ],
+    "sku": "157484778",
+    "name": "Реечные панели 3030 300x300 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      322,
+      527
+    ],
+    "sku": "162667617",
+    "name": "Ligne Blanc Mat 01 300x300 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      323,
+      528
+    ],
+    "sku": "158008198",
+    "name": "Slat 100x3000 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      325,
+      530
+    ],
+    "sku": "108036363",
+    "name": "AM1309-C-Panel 116x2900 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      330,
+      535
+    ],
+    "sku": "169761404",
+    "name": "520x1010 мм для ванной",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      331,
+      536
+    ],
+    "sku": "169837078",
+    "name": "500x820 мм 3D под дерево",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      332,
+      537
+    ],
+    "sku": "165719436",
+    "name": "300x300 мм 3D под камень",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      333,
+      538
+    ],
+    "sku": "147087139",
+    "name": "Белая лакированная 3000x250x9 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      334,
+      539
+    ],
+    "sku": "146996945",
+    "name": "Беркана 122 2600x250x5 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      355
+    ],
+    "sku": "BP9842M3C",
+    "name": "Armstrong Bajkal 90 RH 595×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      356
+    ],
+    "sku": "BP9918M3",
+    "name": "Armstrong Oasis 90 RH 595×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      357
+    ],
+    "sku": "BP2621M3A",
+    "name": "Armstrong Scala 70 RH 595×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      358
+    ],
+    "sku": "BP2524M4A",
+    "name": "Armstrong Feinstratos Microlook 595×595×15",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      359
+    ],
+    "sku": "BP3680M3",
+    "name": "Armstrong Retail 90 RH 595×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      360
+    ],
+    "sku": "595-595-7a",
+    "name": "Плита потолочная Ангара 595×595×7",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      361
+    ],
+    "sku": "BP2731M4",
+    "name": "Armstrong Feinstratos Microlook 1195×595×15",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      362
+    ],
+    "sku": "BP3684M4",
+    "name": "Armstrong Bioguard Plain 595×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      363
+    ],
+    "sku": "BP3841M3",
+    "name": "Armstrong Retail 90 RH 1195×595×12",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      364
+    ],
+    "sku": "BP3065M4",
+    "name": "Armstrong Retail Tegular15 595×595×14",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      417
+    ],
+    "sku": "112798239",
+    "name": "FORMAT 719 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      418
+    ],
+    "sku": "112798220",
+    "name": "FORMAT 510 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      419
+    ],
+    "sku": "112038386",
+    "name": "FORMAT Сириус 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      420
+    ],
+    "sku": "112038656",
+    "name": "FORMAT Веер 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      421
+    ],
+    "sku": "107649083",
+    "name": "FORMAT Велла 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      422
+    ],
+    "sku": "112038510",
+    "name": "FORMAT Гейша 50×50 см",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      423
+    ],
+    "sku": "115251423",
+    "name": "СОЛИД С2064 50×50 см, 2 м²",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      424
+    ],
+    "sku": "104495375",
+    "name": "СОЛИД С517 белая с золотым рисунком",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      556
+    ],
+    "sku": "Q-STYK-80",
+    "name": "Клей для стыков Raccord Quelyd 80 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      557
+    ],
+    "sku": "Q-FL-300",
+    "name": "Клей обойный Спец-флизелин Quelyd 300 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      558
+    ],
+    "sku": "Q-FL-450",
+    "name": "Клей обойный Спец-флизелин Quelyd 450 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      559
+    ],
+    "sku": "Q-EXP-250",
+    "name": "Клей обойный Супер Экспресс Quelyd 250 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      560
+    ],
+    "sku": "Q-VIN-300",
+    "name": "Клей обойный Спец-винил Quelyd 300 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      561
+    ],
+    "sku": "Q-VIN-450",
+    "name": "Клей обойный Спец-винил Quelyd 450 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      562
+    ],
+    "sku": "Q-GLASS-500",
+    "name": "Клей обойный Стеклообои Quelyd 500 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      563
+    ],
+    "sku": "M-CLASSIC-200",
+    "name": "Клей для бумажных обоев Момент Классик 200 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      564
+    ],
+    "sku": "M-IND-300",
+    "name": "Клей обойный Момент Индикатор 300 г",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      928
+    ],
+    "sku": "MOD221-PL-08-G",
+    "name": "Подвесная люстра Maytoni Erich MOD221-PL-08-G",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      934
+    ],
+    "sku": "MOD359-01-C",
+    "name": "Подвесной светильник Maytoni Bicones MOD359-01-C",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "CATEGORY NOT FOUND",
+      "CATEGORY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      935
+    ],
+    "sku": "MOD359-11-C",
+    "name": "Подвесной светильник Maytoni Bicones MOD359-11-C",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "CATEGORY NOT FOUND",
+      "CATEGORY_REVIEW"
+    ]
+  },
+  {
+    "sourceRows": [
+      948
+    ],
+    "sku": "PRO-1",
+    "name": "Окно ПВХ Deceuninck ECO 60",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      949
+    ],
+    "sku": "PRO-2",
+    "name": "Окно ПВХ Deceuninck Urban 71",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      950
+    ],
+    "sku": "PRO-3",
+    "name": "Окно ПВХ Deceuninck Фаворит Спейс 76",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      951
+    ],
+    "sku": "PRO-4",
+    "name": "Окно ПВХ Salamander green Evolution 76 MD",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      952
+    ],
+    "sku": "ALU-24",
+    "name": "Алюминиевое окно/система Alustar",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      953
+    ],
+    "sku": "ALU-21",
+    "name": "Алюминиевое окно/система Balance 90",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      954
+    ],
+    "sku": "ALU-27",
+    "name": "Алюминиевое окно/система Favori",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      955
+    ],
+    "sku": "ALU-25",
+    "name": "Алюминиевое окно/система Gold",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      956
+    ],
+    "sku": "ALU-19",
+    "name": "Алюминиевое окно/система HI Therm 73 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      957
+    ],
+    "sku": "ALU-18",
+    "name": "Алюминиевое окно/система Largot 64 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      958
+    ],
+    "sku": "ALU-26",
+    "name": "Алюминиевое окно/система Ruit",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      959
+    ],
+    "sku": "ALU-23",
+    "name": "Алюминиевое окно/система SkyProf",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      960
+    ],
+    "sku": "ALU-22",
+    "name": "Алюминиевое окно/система Therminal",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      961
+    ],
+    "sku": "ALU-17",
+    "name": "Алюминиевое окно/система VISION 50",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      962
+    ],
+    "sku": "ALU-20",
+    "name": "Алюминиевое окно/система Viking 90 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      963
+    ],
+    "sku": "CR-15",
+    "name": "Подоконник Crystallit — Антрацит матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      964
+    ],
+    "sku": "CR-2",
+    "name": "Подоконник Crystallit — Белый глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      965
+    ],
+    "sku": "CR-14",
+    "name": "Подоконник Crystallit — Белый дуб глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      966
+    ],
+    "sku": "CR-13",
+    "name": "Подоконник Crystallit — Белый дуб матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      967
+    ],
+    "sku": "CR-1",
+    "name": "Подоконник Crystallit — Белый матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      968
+    ],
+    "sku": "CR-10",
+    "name": "Подоконник Crystallit — Бристол глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      969
+    ],
+    "sku": "CR-9",
+    "name": "Подоконник Crystallit — Бристол матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      970
+    ],
+    "sku": "CR-7",
+    "name": "Подоконник Crystallit — Венге глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      971
+    ],
+    "sku": "CR-8",
+    "name": "Подоконник Crystallit — Венге матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      972
+    ],
+    "sku": "CR-18",
+    "name": "Подоконник Crystallit — Золотой дуб глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      973
+    ],
+    "sku": "CR-17",
+    "name": "Подоконник Crystallit — Золотой дуб матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      974
+    ],
+    "sku": "CR-5",
+    "name": "Подоконник Crystallit — Мрамор глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      975
+    ],
+    "sku": "CR-6",
+    "name": "Подоконник Crystallit — Мрамор матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      976
+    ],
+    "sku": "CR-16",
+    "name": "Подоконник Crystallit — Натуральный дуб глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      977
+    ],
+    "sku": "CR-12",
+    "name": "Подоконник Crystallit — Орех глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      978
+    ],
+    "sku": "CR-11",
+    "name": "Подоконник Crystallit — Орех матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      979
+    ],
+    "sku": "CR-3",
+    "name": "Подоконник Crystallit — Палермо глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      980
+    ],
+    "sku": "CR-4",
+    "name": "Подоконник Crystallit — Палермо матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      981
+    ],
+    "sku": "EST-1",
+    "name": "Подоконник Estera — Белый глянец",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      982
+    ],
+    "sku": "EST-2",
+    "name": "Подоконник Estera — Белый сатин",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      983
+    ],
+    "sku": "EST-5",
+    "name": "Подоконник Estera — Бристол сатин",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      984
+    ],
+    "sku": "EST-3",
+    "name": "Подоконник Estera — Мрамор сатин",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      985
+    ],
+    "sku": "EST-4",
+    "name": "Подоконник Estera — Санлайт сатин",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      986
+    ],
+    "sku": "EST-6",
+    "name": "Подоконник Estera — София сатин",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      987
+    ],
+    "sku": "PVC-1",
+    "name": "Стандартный ПВХ-подоконник — Белый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      988
+    ],
+    "sku": "PVC-3",
+    "name": "Стандартный ПВХ-подоконник — Золотой дуб",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      989
+    ],
+    "sku": "PVC-2",
+    "name": "Стандартный ПВХ-подоконник — Махагон",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      990
+    ],
+    "sku": "PVC-4",
+    "name": "Стандартный ПВХ-подоконник — Орех",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      991
+    ],
+    "sku": "PVC-5",
+    "name": "Стандартный ПВХ-подоконник — Темный дуб",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      992
+    ],
+    "sku": "EBB-1",
+    "name": "Оконный отлив металлический — Белый",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      993
+    ],
+    "sku": "EBB-2",
+    "name": "Оконный отлив металлический — Коричневый",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      994
+    ],
+    "sku": "EBB-3",
+    "name": "Оконный отлив металлический — Золотой дуб",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      995
+    ],
+    "sku": "EBB-4",
+    "name": "Оконный отлив металлический — Орех",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      996
+    ],
+    "sku": "EBB-5",
+    "name": "Оконный отлив металлический — Оцинковка",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      997
+    ],
+    "sku": "SLOPE-1",
+    "name": "Откосная система Crystallit — белый глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      998
+    ],
+    "sku": "SLOPE-2",
+    "name": "Откосная система Crystallit — дуб золотой глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      999
+    ],
+    "sku": "SLOPE-3",
+    "name": "Откосная система Crystallit — дуб золотой матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1000
+    ],
+    "sku": "SLOPE-4",
+    "name": "Откосная система Crystallit — орех глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1001
+    ],
+    "sku": "SLOPE-5",
+    "name": "Откосная система Crystallit — орех матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1002
+    ],
+    "sku": "SLOPE-6",
+    "name": "Откосная система Crystallit — венге глянцевый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1003
+    ],
+    "sku": "SLOPE-7",
+    "name": "Откосная система Crystallit — венге матовый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1004
+    ],
+    "sku": "SLOPE-P-1",
+    "name": "П 11",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1005
+    ],
+    "sku": "SLOPE-P-10",
+    "name": "Уголок ПВХ 40×40×3 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1006
+    ],
+    "sku": "SLOPE-P-11",
+    "name": "Уголок ПВХ 50×18×3 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1007
+    ],
+    "sku": "SLOPE-P-12",
+    "name": "Уголок ПВХ 50×35×2 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1008
+    ],
+    "sku": "SLOPE-P-13",
+    "name": "Уголок ПВХ 50×30×2 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1009
+    ],
+    "sku": "SLOPE-P-14",
+    "name": "Уголок ПВХ 60×25×2 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1010
+    ],
+    "sku": "SLOPE-P-15",
+    "name": "Уголок ПВХ 70×20×2 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1011
+    ],
+    "sku": "SLOPE-P-2",
+    "name": "СП 11",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1012
+    ],
+    "sku": "SLOPE-P-3",
+    "name": "СП 105",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1013
+    ],
+    "sku": "SLOPE-P-4",
+    "name": "F 50×18×3 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1014
+    ],
+    "sku": "SLOPE-P-5",
+    "name": "F 60×25×1 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1015
+    ],
+    "sku": "SLOPE-P-6",
+    "name": "Откос и крышка откоса",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1016
+    ],
+    "sku": "SLOPE-P-7",
+    "name": "Обрешетка ПВХ",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1017
+    ],
+    "sku": "SLOPE-P-8",
+    "name": "Сэндвич-панель 3000×1500×10 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1018
+    ],
+    "sku": "SLOPE-P-9",
+    "name": "Уголок ПВХ 110×20×2 мм",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1019
+    ],
+    "sku": "MOS-1",
+    "name": "Сетка из стекловолокна с ПВХ-покрытием",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      1020
+    ],
+    "sku": "MOS-2",
+    "name": "Рамочная москитная сетка",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      1021
+    ],
+    "sku": "MOS-3",
+    "name": "Рулонная москитная сетка",
+    "sheet": "MANUAL_REVIEW",
+    "manualReasons": [
+      "MISSING BRAND",
+      "MISSING_BRAND"
+    ]
+  },
+  {
+    "sourceRows": [
+      1022
+    ],
+    "sku": "NANO-H-1",
+    "name": "Ручка оконная VITRUV ромб с защитой Белая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1023
+    ],
+    "sku": "NANO-H-10",
+    "name": "Ручка оконная VITRUV 099 Черная",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1024
+    ],
+    "sku": "NANO-H-11",
+    "name": "Ручка оконная VITRUV МАТОВЫЙ ромб Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1025
+    ],
+    "sku": "NANO-H-12",
+    "name": "Ручка оконная VITRUV ромб с защитой Черный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1026
+    ],
+    "sku": "NANO-H-13",
+    "name": "Ручка оконная VITRUV ромб Махагон",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1027
+    ],
+    "sku": "NANO-H-14",
+    "name": "Ручка оконная VITRUV 099 Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1028
+    ],
+    "sku": "NANO-H-15",
+    "name": "Ручка оконная алюминиевая Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1029
+    ],
+    "sku": "NANO-H-16",
+    "name": "Ручка оконная пластиковая Коричневый 8017",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1030
+    ],
+    "sku": "NANO-H-17",
+    "name": "Ручка оконная пластиковая Зол.дуб 8003",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1031
+    ],
+    "sku": "NANO-H-18",
+    "name": "Ручка оконная пластиковая Антрацит 7024",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1032
+    ],
+    "sku": "NANO-H-19",
+    "name": "Ручка оконная LARA Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1033
+    ],
+    "sku": "NANO-H-2",
+    "name": "Ручка оконная VITRUV 099 Белая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1034
+    ],
+    "sku": "NANO-H-20",
+    "name": "Ручка оконная квадратная DESA Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1035
+    ],
+    "sku": "NANO-H-21",
+    "name": "Ручка оконная LARA Коричневая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1036
+    ],
+    "sku": "NANO-H-22",
+    "name": "Ручка оконная квадратная DESA Коричневая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1037
+    ],
+    "sku": "NANO-H-23",
+    "name": "Ручка оконная алюминиевая Зол. Дуб Мега 8003",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1038
+    ],
+    "sku": "NANO-H-24",
+    "name": "Ручка оконная VITRUV МАТОВЫЙ ромб Черный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1039
+    ],
+    "sku": "NANO-H-25",
+    "name": "Ручка оконная VITRUV ромб Антрацит",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1040
+    ],
+    "sku": "NANO-H-3",
+    "name": "Ручка оконная пластиковая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1041
+    ],
+    "sku": "NANO-H-4",
+    "name": "Ручка оконная квадратная DESA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1042
+    ],
+    "sku": "NANO-H-5",
+    "name": "Ручка оконная LARA",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1043
+    ],
+    "sku": "NANO-H-6",
+    "name": "Ручка оконная алюминиевая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1044
+    ],
+    "sku": "NANO-H-7",
+    "name": "Ручка оконная VITRUV ромб",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1045
+    ],
+    "sku": "NANO-H-8",
+    "name": "Ручка оконная VITRUV ромб с защитой Серебро",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1046
+    ],
+    "sku": "NANO-H-9",
+    "name": "Ручка оконная VITRUV 099 Махагон",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1051
+    ],
+    "sku": "00000001647",
+    "name": "Уплотнитель оконный QL-4465 белый для створки",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1053
+    ],
+    "sku": "NANO-F-1",
+    "name": "Шпингалет 600",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1054
+    ],
+    "sku": "NANO-F-2",
+    "name": "Козьяножка",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1055
+    ],
+    "sku": "NANO-F-3",
+    "name": "Ответная планка на тепл.аллюм Новая",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1056
+    ],
+    "sku": "NANO-F-4",
+    "name": "Тахозы угловые №24мм 1м 90°",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1057
+    ],
+    "sku": "NANO-F-5",
+    "name": "Скоба №32",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1058
+    ],
+    "sku": "NANO-F-6",
+    "name": "Шестигранник маленький 1уп",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1059
+    ],
+    "sku": "NANO-F-7",
+    "name": "Зацепы 9 серия на ПВХ",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1060
+    ],
+    "sku": "NANO-F-8",
+    "name": "Тахозы",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1062
+    ],
+    "sku": "BAU1027",
+    "name": "Пена монтажная профессиональная Bauset TRADE 65 PROFI зимняя (-18C)",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1065
+    ],
+    "sku": "SEAL-134",
+    "name": "TYTAN Professional герметик силиконовый универсальный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1066
+    ],
+    "sku": "SEAL-135",
+    "name": "HAUSER герметик силиконовый универсальный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1067
+    ],
+    "sku": "SEAL-136",
+    "name": "TYTAN Professional герметик силиконовый санитарный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1068
+    ],
+    "sku": "SEAL-137",
+    "name": "TYTAN Professional герметик силиконовый санитарный UPG TURBO",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1069
+    ],
+    "sku": "SEAL-138",
+    "name": "HAUSER герметик силиконовый санитарный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1070
+    ],
+    "sku": "SEAL-139",
+    "name": "TYTAN Professional герметик для аквариума и стекла",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1071
+    ],
+    "sku": "SEAL-140",
+    "name": "TYTAN Professional герметик высокотемпературный",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1072
+    ],
+    "sku": "SEAL-141",
+    "name": "Силиконовый герметик Neutral PRO Tytan Professional",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1073
+    ],
+    "sku": "SEAL-142",
+    "name": "TYTAN Professional Стоп Плесень Нейтральный Силикон",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1074
+    ],
+    "sku": "SEAL-143",
+    "name": "TYTAN Professional герметик PU 25 полиуритановый",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1075
+    ],
+    "sku": "SEAL-144",
+    "name": "Герметик полиуретановый PU 40 Tytan Professional, 600 мл",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1076
+    ],
+    "sku": "SEAL-145",
+    "name": "Герметик Sikaflex PRO-3, 600 мл",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1077
+    ],
+    "sku": "SEAL-146",
+    "name": "Клей-герметик Sikaflex 11 FC, 300 мл",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1078
+    ],
+    "sku": "SEAL-147",
+    "name": "Полиуретановый герметик Sikaflex Construction, 600 мл",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1079
+    ],
+    "sku": "SEAL-148",
+    "name": "Sikasil WS 605 S — однокомпонентный силиконовый атмосферостойкий герметик",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1080
+    ],
+    "sku": "SEAL-149",
+    "name": "Sikasil SG 20 — силиконовый клей-герметик",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1081
+    ],
+    "sku": "SEAL-150",
+    "name": "Sikasil WS-305 S — атмосферостойкий силиконовый герметик для фасадов и структурного остекления",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1082
+    ],
+    "sku": "ROB-1",
+    "name": "Лента НЛ РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1083
+    ],
+    "sku": "ROB-2",
+    "name": "Лента ПСУЛ РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1084
+    ],
+    "sku": "ROB-3",
+    "name": "Лента ВС РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1085
+    ],
+    "sku": "ROB-4",
+    "name": "Лента ВМ РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1086
+    ],
+    "sku": "ROB-5",
+    "name": "Лента БО Б РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  },
+  {
+    "sourceRows": [
+      1087
+    ],
+    "sku": "ROB-6",
+    "name": "Лента ПБ РОБИТЕКС",
+    "sheet": "MISSING_PRICE",
+    "manualReasons": []
+  }
+]

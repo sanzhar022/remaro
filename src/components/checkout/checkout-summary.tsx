@@ -23,7 +23,7 @@ export function CheckoutSummary({ items, deliveryMethod }: { items: readonly Car
       </ul>
       <dl className="mt-5 space-y-3 text-sm">
         <div className="flex justify-between gap-4"><dt className="text-muted">Стоимость товаров</dt><dd className="font-semibold">{formatPrice(subtotal)}</dd></div>
-        <div className="flex justify-between gap-4"><dt className="text-muted">Доставка</dt><dd className="font-semibold">{formatPrice(deliveryPrice)}</dd></div>
+        <div className="flex justify-between gap-4"><dt className="text-muted">Доставка</dt><dd className="text-right font-semibold">Уточняется при подтверждении</dd></div>
       </dl>
       <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-border pt-5"><span className="font-bold">Итого</span><span className="type-price">{formatPrice(total)}</span></div>
     </aside>

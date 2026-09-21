@@ -10,8 +10,9 @@ export interface ProductInfoProps {
 
 export function ProductInfo({ product }: ProductInfoProps) {
   const isAvailable = product.stock > 0;
-  const discount = product.oldPrice
-    ? Math.round((1 - product.price / product.oldPrice) * 100)
+  const oldPrice = product.oldPrice !== undefined && product.oldPrice > product.price ? product.oldPrice : undefined;
+  const discount = oldPrice
+    ? Math.round(((oldPrice - product.price) / oldPrice) * 100)
     : undefined;
 
   return (
@@ -35,13 +36,13 @@ export function ProductInfo({ product }: ProductInfoProps) {
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <span className="text-3xl font-bold tracking-tight text-[var(--navy-900)] sm:text-4xl">{formatPrice(product.price)}</span>
           <span className="text-muted">за {product.unit}</span>
-          {product.oldPrice && <span className="type-old-price w-full text-base">{formatPrice(product.oldPrice)}</span>}
+          {oldPrice && <span className="type-old-price w-full text-base">{formatPrice(oldPrice)}</span>}
         </div>
       </div>
 
       <div className="mt-6">
         <p className={`font-bold ${isAvailable ? "text-success" : "text-destructive"}`}>{isAvailable ? "В наличии" : "Нет в наличии"}</p>
-        {isAvailable && <p className="type-small mt-1 text-muted">Осталось: {product.stock} шт.</p>}
+        {isAvailable && <p className="type-small mt-1 text-muted">Осталось: {product.stock} {product.unit}</p>}
       </div>
 
       <ProductPurchaseControls product={product} />

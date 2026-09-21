@@ -1,7 +1,6 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import Link from "next/link";
 import { useForm, useWatch } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,13 +11,14 @@ export interface CheckoutFormProps {
   onSubmit: (data: CheckoutFormData) => Promise<void>;
   onDeliveryMethodChange: (method: DeliveryMethod) => void;
   submitError?: string | null;
+  initialValues?: Partial<CheckoutFormData>;
 }
 
-export function CheckoutForm({ onSubmit, onDeliveryMethodChange, submitError }: CheckoutFormProps) {
+export function CheckoutForm({ onSubmit, onDeliveryMethodChange, submitError, initialValues }: CheckoutFormProps) {
   const { register, handleSubmit, control, formState: { errors, isSubmitting } } = useForm<CheckoutFormData>({
     resolver: zodResolver(checkoutSchema),
     defaultValues: {
-      firstName: "", lastName: "", phone: "", email: "",
+      firstName: initialValues?.firstName ?? "", lastName: initialValues?.lastName ?? "", phone: initialValues?.phone ?? "", email: initialValues?.email ?? "",
       deliveryMethod: "delivery", city: "Алматы", address: "",
       apartment: "", entrance: "", floor: "", comment: "",
       paymentMethod: "cash", privacyAccepted: false,
@@ -65,11 +65,11 @@ export function CheckoutForm({ onSubmit, onDeliveryMethodChange, submitError }: 
             <Field label="Подъезд"><Input {...register("entrance")} /></Field>
             <Field label="Этаж"><Input {...register("floor")} /></Field>
             <label className="sm:col-span-2"><span className="mb-1.5 block text-sm font-semibold">Комментарий курьеру</span><textarea rows={3} className="w-full resize-y rounded-[var(--radius-md)] border border-border bg-surface px-4 py-3 text-foreground shadow-[var(--shadow-sm)] placeholder:text-muted/70 focus:border-primary focus:outline-none focus:ring-3 focus:ring-primary/15" {...register("comment")} /></label>
-            <p className="type-small sm:col-span-2 text-muted">Доставка по Алматы: 2 000 ₸ · ориентировочно 1–2 дня.</p>
+            <p className="type-small sm:col-span-2 text-muted">Стоимость и условия доставки уточняются при подтверждении заказа.</p>
           </div>
         ) : (
           <div className="mt-6 rounded-[var(--radius-md)] bg-secondary p-5">
-            <h3 className="type-h3">Remaro Алматы</h3><p className="mt-2 text-muted">ул. Примерная, 10</p><p className="type-small mt-1 text-muted">Ежедневно 09:00–20:00 · после подтверждения · 0 ₸</p>
+            <h3 className="type-h3">Самовывоз Remaro</h3><p className="mt-2 text-muted">Адрес и время самовывоза сообщит менеджер при подтверждении заказа.</p>
           </div>
         )}
       </section>
@@ -92,7 +92,7 @@ export function CheckoutForm({ onSubmit, onDeliveryMethodChange, submitError }: 
       <div className={fieldClass}>
         <label className="flex cursor-pointer items-start gap-3">
           <input type="checkbox" className="mt-1 size-4 accent-primary" {...register("privacyAccepted")} />
-          <span className="text-sm">Я согласен с <Link href="#" className="font-semibold text-primary underline underline-offset-2">условиями обработки данных</Link></span>
+          <span className="text-sm">Я согласен на обработку введённых данных для оформления и подтверждения заказа.</span>
         </label>
         {errors.privacyAccepted?.message && <p role="alert" className="type-small mt-2 text-destructive">{errors.privacyAccepted.message}</p>}
         {submitError && <p role="alert" className="mt-4 rounded-[var(--radius-md)] bg-red-50 p-3 text-sm font-medium text-destructive">{submitError}</p>}

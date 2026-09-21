@@ -2,12 +2,16 @@ import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 import { registerSchema } from "@/lib/auth-schema";
 import { prisma } from "@/lib/prisma";
-import { rateLimiter, rateLimitKey } from "@/lib/rate-limit";
+import { checkRateLimit, rateLimitHeaders, rateLimitKey } from "@/lib/rate-limit";
 import { isSameOrigin } from "@/lib/request-security";
 
 export async function POST(request: Request) {
   if (!isSameOrigin(request)) return NextResponse.json({ message: "Недопустимый источник запроса." }, { status: 403 });
-  if (!(await rateLimiter.check(rateLimitKey(request, "register"))).allowed) return NextResponse.json({ message: "Слишком много запросов." }, { status: 429 });
+  const limit = await checkRateLimit("register", rateLimitKey(request, "register"));
+  if (!limit.allowed) return NextResponse.json(
+    { message: limit.reason === "limit" ? "Слишком много запросов. Попробуйте позже." : "Регистрация временно недоступна. Попробуйте позже." },
+    { status: limit.reason === "limit" ? 429 : 503, headers: rateLimitHeaders(limit) },
+  );
   const body: unknown = await request.json().catch(() => null);
   const parsed = registerSchema.safeParse(body);
 

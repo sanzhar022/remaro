@@ -1,7 +1,7 @@
 "use client";
 
-import { Filter, RotateCcw, Search } from "lucide-react";
-import type { FormEvent } from "react";
+import { Filter, RotateCcw, Search, X } from "lucide-react";
+import { useEffect, useState, type FormEvent } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -92,7 +92,7 @@ function FilterFields({ brands, priceRange, showSearch, prefix }: ProductFilters
         <legend className="font-bold">Бренд</legend>
         <div className="mt-3 max-h-52 space-y-2 overflow-y-auto pr-1">
           {brands.map((brand) => (
-            <label key={brand} className="flex cursor-pointer items-start gap-2.5 text-sm">
+            <label key={brand} className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
               <input type="checkbox" checked={selectedBrands.includes(brand)} onChange={(event) => toggleBrand(brand, event.target.checked)} className="mt-0.5 size-4 accent-primary" />
               <span className="min-w-0 break-words">{brand}</span>
             </label>
@@ -102,22 +102,10 @@ function FilterFields({ brands, priceRange, showSearch, prefix }: ProductFilters
 
       <fieldset>
         <legend className="font-bold">Наличие</legend>
-        <label className="mt-3 flex cursor-pointer items-center gap-2.5 text-sm">
+        <label className="mt-3 flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
           <input type="checkbox" checked={searchParams.get("inStock") === "true"} onChange={(event) => updateSingle("inStock", event.target.checked ? "true" : undefined)} className="size-4 accent-primary" />
           Только в наличии
         </label>
-      </fieldset>
-
-      <fieldset>
-        <legend className="font-bold">Рейтинг</legend>
-        <div className="mt-3 space-y-2">
-          {[{ label: "Все", value: "" }, { label: "4 и выше", value: "4" }, { label: "3 и выше", value: "3" }].map(({ label, value }) => (
-            <label key={label} className="flex cursor-pointer items-center gap-2.5 text-sm">
-              <input type="radio" name={`${prefix}-rating`} checked={(searchParams.get("rating") ?? "") === value} onChange={() => updateSingle("rating", value || undefined)} className="size-4 accent-primary" />
-              {label}
-            </label>
-          ))}
-        </div>
       </fieldset>
 
       <ClearFiltersButton className="w-full" />
@@ -137,16 +125,38 @@ export function ClearFiltersButton({ className = "" }: { className?: string }) {
 }
 
 export function ProductFilters(props: ProductFiltersProps) {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <>
-      <aside className="hidden rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:block lg:sticky lg:top-5">
+      <aside className="hidden rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow-sm)] lg:sticky lg:top-36 lg:block">
         <h2 className="type-h3 mb-6">Фильтры</h2>
         <FilterFields {...props} prefix="desktop" />
       </aside>
-      <details className="rounded-[var(--radius-md)] border border-border bg-surface lg:hidden">
-        <summary className="flex min-h-12 cursor-pointer list-none items-center gap-2 px-4 font-bold text-primary"><Filter size={18} aria-hidden="true" />Фильтры</summary>
-        <div className="border-t border-border p-4"><FilterFields {...props} prefix="mobile" /></div>
-      </details>
+      <Button type="button" variant="outline" className="w-full lg:hidden" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}><Filter size={18} aria-hidden="true" />Фильтры</Button>
+      {open && (
+        <div className="fixed inset-0 z-[70] lg:hidden">
+          <button type="button" aria-label="Закрыть фильтры" className="absolute inset-0 bg-[var(--navy-950)]/55" onClick={() => setOpen(false)} />
+          <section role="dialog" aria-modal="true" aria-labelledby="mobile-filters-title" className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-surface shadow-[var(--shadow-lg)]">
+            <header className="flex min-h-16 items-center justify-between border-b border-border px-4"><h2 id="mobile-filters-title" className="type-h3">Фильтры</h2><button type="button" autoFocus onClick={() => setOpen(false)} aria-label="Закрыть фильтры" className="grid size-11 place-items-center rounded-[var(--radius-md)] hover:bg-secondary"><X size={22} /></button></header>
+            <div className="min-h-0 flex-1 overflow-y-auto p-5"><FilterFields {...props} prefix="mobile" /></div>
+            <div className="border-t border-border bg-surface p-4"><Button type="button" className="w-full" onClick={() => setOpen(false)}>Показать товары</Button></div>
+          </section>
+        </div>
+      )}
     </>
   );
 }

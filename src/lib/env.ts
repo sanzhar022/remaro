@@ -8,6 +8,8 @@ const schema = z.object({
   CLOUDINARY_API_KEY: z.string().min(1),
   CLOUDINARY_API_SECRET: z.string().min(1),
   PAYMENTS_ENABLED: z.enum(["true", "false"]).default("false"),
+  UPSTASH_REDIS_REST_URL: z.string().url().optional().or(z.literal("")),
+  UPSTASH_REDIS_REST_TOKEN: z.string().min(1).optional().or(z.literal("")),
 });
 
 const parsed = schema.safeParse(process.env);

@@ -1,14 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["172.20.10.2"],
   images: {
     qualities: [75, 92],
     remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
   },
   async headers() {
+    const developmentScriptPolicy = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
     const csp = [
       "default-src 'self'", "base-uri 'self'", "form-action 'self'", "frame-ancestors 'none'",
-      "object-src 'none'", "script-src 'self' 'unsafe-inline'", "style-src 'self' 'unsafe-inline'",
+      "object-src 'none'", `script-src 'self' 'unsafe-inline'${developmentScriptPolicy}`, "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://res.cloudinary.com", "font-src 'self' data:",
       "connect-src 'self'", "upgrade-insecure-requests",
     ].join("; ");

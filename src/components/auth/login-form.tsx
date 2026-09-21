@@ -20,7 +20,7 @@ export function LoginForm() {
   const submit = async (data: LoginFormData) => {
     const result = await signIn("credentials", { ...data, redirect: false });
     if (result?.error) {
-      setError("root", { message: "Неверный email или пароль." });
+      setError("root", { message: result.code === "rate_limited" ? "Слишком много попыток входа. Попробуйте позже." : "Неверный email или пароль." });
       return;
     }
     router.push("/account");

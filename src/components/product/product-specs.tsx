@@ -6,16 +6,19 @@ export interface ProductSpecsProps {
 }
 
 export function ProductSpecs({ brand, specifications }: ProductSpecsProps) {
-  const rows: ProductSpecification[] = [{ name: "Бренд", value: brand }, ...specifications];
+  const rows: ProductSpecification[] = [
+    { name: "Бренд", value: brand },
+    ...specifications.filter((item) => item.name.trim().toLocaleLowerCase("ru") !== "бренд" && item.name.trim() && item.value.trim()),
+  ];
 
   return (
     <section aria-labelledby="product-specs-title" className="rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow-sm)] sm:p-8">
       <h2 id="product-specs-title" className="type-h2">Характеристики</h2>
       <dl className="mt-6 divide-y divide-border">
-        {rows.map((specification, index) => (
-          <div key={`${specification.name}-${index}`} className="grid gap-1 py-3 sm:grid-cols-2 sm:gap-6">
-            <dt className="text-muted">{specification.name}</dt>
-            <dd className="font-semibold text-foreground sm:text-right">{specification.value}</dd>
+        {rows.map((specification) => (
+          <div key={`${specification.name}-${specification.value}`} className="grid min-w-0 gap-1 py-3 sm:grid-cols-2 sm:gap-6">
+            <dt className="break-words text-muted">{specification.name}</dt>
+            <dd className="break-words font-semibold text-foreground sm:text-right">{specification.value}</dd>
           </div>
         ))}
       </dl>

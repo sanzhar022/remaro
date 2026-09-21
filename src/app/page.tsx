@@ -9,26 +9,27 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SectionHeader } from "@/components/ui/section-header";
 import { getFeaturedCategories } from "@/lib/categories";
+import { companyInfo } from "@/lib/company-info";
 import { getPopularProducts } from "@/lib/products";
 
 const benefits = [
   { icon: ShieldCheck, title: "Гарантия качества", text: "Только проверенные поставщики" },
-  { icon: Truck, title: "Доставка и самовывоз", text: "Быстрая доставка по Алматы и области" },
+  { icon: Truck, title: "Доставка и самовывоз", text: "Условия согласовываются при подтверждении заказа" },
   { icon: Headphones, title: "Поддержка", text: "Поможем с выбором материалов" },
 ] as const;
 
 export default async function HomePage() {
   const [featuredCategories, popularProducts] = await Promise.all([
     getFeaturedCategories(),
-    getPopularProducts(),
+    getPopularProducts(10),
   ]);
 
   return (
     <>
-      <section className="relative isolate min-h-[690px] overflow-hidden bg-[var(--navy-950)] text-white sm:min-h-[650px] lg:min-h-[540px]">
+      <section className="relative isolate min-h-[540px] overflow-hidden bg-[var(--navy-950)] text-white sm:min-h-[600px] lg:min-h-[540px]">
         <Image src="/images/home/home.png" alt="Современный дом, построенный с использованием качественных материалов" fill priority quality={92} sizes="100vw" className="-z-20 object-cover object-[68%_center] sm:object-[64%_center] lg:object-center" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,24,42,0.98)_0%,rgba(7,24,42,0.90)_42%,rgba(7,24,42,0.28)_72%,rgba(7,24,42,0.08)_100%)] max-lg:bg-[linear-gradient(90deg,rgba(7,24,42,0.97)_0%,rgba(7,24,42,0.82)_58%,rgba(7,24,42,0.35)_100%)]" />
-        <Container className="flex min-h-[690px] flex-col justify-center py-10 sm:min-h-[650px] lg:min-h-[540px] lg:py-8">
+        <Container className="flex min-h-[540px] flex-col justify-center py-8 sm:min-h-[600px] sm:py-10 lg:min-h-[540px] lg:py-8">
           <div className="max-w-[38rem]">
             <Badge className="mb-4 border border-primary/35 bg-[var(--navy-950)]/60 text-primary">Remaro · Алматы</Badge>
             <h1 className="max-w-[600px] text-[2.1rem] font-bold leading-[1.08] tracking-[-0.035em] min-[430px]:text-[2.5rem] lg:max-w-[580px] lg:text-[3rem] xl:max-w-[680px]">Строительные материалы<br />для вашего проекта</h1>
@@ -74,8 +75,8 @@ export default async function HomePage() {
 
       <Section className="pt-0">
         <div className="grid overflow-hidden rounded-[var(--radius-xl)] border border-border bg-surface shadow-[var(--shadow-sm)] lg:grid-cols-2">
-          <div className="p-6 sm:p-9"><span className="grid size-11 place-items-center rounded-md bg-secondary text-[var(--navy-900)]"><Truck /></span><h2 className="type-h2 mt-5">Доставка по Алматы</h2><p className="mt-3 text-muted">Доставим заказ по указанному адресу. Стоимость — 2 000 ₸, ориентировочный срок — 1–2 дня.</p></div>
-          <div className="border-t border-border bg-[var(--navy-900)] p-6 text-white sm:p-9 lg:border-l lg:border-t-0"><div className="flex gap-3 text-primary"><MapPin /><Clock3 /></div><h2 className="type-h2 mt-5">Самовывоз</h2><p className="mt-3 text-white/65">Получение в Алматы после подтверждения заказа. Самовывоз бесплатный.</p></div>
+          <div className="p-6 sm:p-9"><span className="grid size-11 place-items-center rounded-md bg-secondary text-[var(--navy-900)]"><Truck /></span><h2 className="type-h2 mt-5">Доставка по Алматы</h2><p className="mt-3 text-muted">{companyInfo.delivery.priceText} {companyInfo.delivery.etaText}</p></div>
+          <div className="border-t border-border bg-[var(--navy-900)] p-6 text-white sm:p-9 lg:border-l lg:border-t-0"><div className="flex gap-3 text-primary"><MapPin /><Clock3 /></div><h2 className="type-h2 mt-5">Самовывоз</h2><p className="mt-3 text-white/65">{companyInfo.pickup.detailsText}</p></div>
         </div>
       </Section>
 

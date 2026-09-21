@@ -1,12 +1,16 @@
 import { CreditCard, Store, Truck } from "lucide-react";
-
-const deliveryItems = [
-  { icon: Truck, title: "Доставка", text: "Доставка по Алматы и области. Срок и стоимость рассчитываются при оформлении." },
-  { icon: Store, title: "Самовывоз", text: "Самовывоз из магазина после подтверждения заказа." },
-  { icon: CreditCard, title: "Оплата", text: "Оплата картой или при получении. Онлайн-оплата будет подключена позже." },
-] as const;
+import Link from "next/link";
+import { companyInfo } from "@/lib/company-info";
+import { paymentsEnabled } from "@/lib/payment-service";
 
 export function ProductDelivery() {
+  const onlinePaymentEnabled = paymentsEnabled();
+  const deliveryItems = [
+    { icon: Truck, title: "Доставка", text: `${companyInfo.delivery.priceText} ${companyInfo.delivery.etaText}` },
+    { icon: Store, title: "Самовывоз", text: companyInfo.pickupAddress ? `Пункт самовывоза: ${companyInfo.pickupAddress}. Выдача после подтверждения заказа.` : companyInfo.pickup.detailsText },
+    { icon: CreditCard, title: "Оплата", text: onlinePaymentEnabled ? "Доступные способы оплаты отображаются при оформлении заказа." : companyInfo.payment.detailsText },
+  ] as const;
+
   return (
     <section aria-labelledby="product-delivery-title">
       <h2 id="product-delivery-title" className="type-h2">Получение и оплата</h2>
@@ -19,6 +23,7 @@ export function ProductDelivery() {
           </article>
         ))}
       </div>
+      <Link href="/delivery" className="mt-5 inline-flex min-h-11 items-center font-semibold text-[var(--navy-900)] underline decoration-primary underline-offset-4 hover:text-primary">Подробнее о доставке и оплате</Link>
     </section>
   );
 }

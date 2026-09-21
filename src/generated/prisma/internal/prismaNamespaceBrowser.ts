@@ -51,6 +51,7 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
+  SiteSettings: 'SiteSettings',
   Category: 'Category',
   Product: 'Product',
   ProductImage: 'ProductImage',
@@ -77,6 +78,30 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 } as const)
 
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
+
+
+export const SiteSettingsScalarFieldEnum = {
+  id: 'id',
+  companyName: 'companyName',
+  shortDescription: 'shortDescription',
+  aboutTitle: 'aboutTitle',
+  aboutShortText: 'aboutShortText',
+  aboutText: 'aboutText',
+  phone: 'phone',
+  whatsapp: 'whatsapp',
+  email: 'email',
+  address: 'address',
+  city: 'city',
+  workingHours: 'workingHours',
+  instagramUrl: 'instagramUrl',
+  tiktokUrl: 'tiktokUrl',
+  latitude: 'latitude',
+  longitude: 'longitude',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SiteSettingsScalarFieldEnum = (typeof SiteSettingsScalarFieldEnum)[keyof typeof SiteSettingsScalarFieldEnum]
 
 
 export const CategoryScalarFieldEnum = {
@@ -229,6 +254,7 @@ export const OrderScalarFieldEnum = {
   subtotal: 'subtotal',
   deliveryPrice: 'deliveryPrice',
   total: 'total',
+  stockReserved: 'stockReserved',
   status: 'status',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'

@@ -33,6 +33,7 @@ export default async function OrderSuccessPage({ params, searchParams }: {
           <span className="mx-auto grid size-20 place-items-center rounded-full bg-[#e2f3e9] text-success"><CheckCircle2 size={40} aria-hidden="true" /></span>
           <h1 className="type-h1 mt-7">Заказ оформлен</h1>
           <p className="mt-3 text-lg text-muted">Спасибо за заказ! Номер заказа: <strong className="text-foreground">{order.orderNumber}</strong></p>
+          <p className="mt-2 text-muted">Мы свяжемся с вами для подтверждения заказа.</p>
         </header>
         <OrderDetails order={order} compactHeader />
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

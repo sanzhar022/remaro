@@ -8,8 +8,8 @@ export interface CategoryGridProps {
 
 export function CategoryGrid({ categories, dense = false }: CategoryGridProps) {
   return (
-    <div className={`grid min-w-0 grid-cols-1 gap-4 min-[430px]:grid-cols-2 lg:grid-cols-3 ${dense ? "xl:grid-cols-6" : "xl:grid-cols-5"}`}>
-      {categories.map((category) => <CategoryCard key={category.id} category={category} />)}
+    <div className={`grid min-w-0 grid-cols-1 gap-4 min-[430px]:grid-cols-2 lg:grid-cols-3 ${dense ? "xl:grid-cols-6" : "xl:grid-cols-4"}`}>
+      {categories.map((category) => <CategoryCard key={category.id} category={category} compact={dense} />)}
     </div>
   );
 }

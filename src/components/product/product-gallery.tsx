@@ -16,7 +16,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
     <div className="min-w-0">
       <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[var(--radius-xl)] border border-border bg-[#f3f4f6] text-[var(--navy-900)]/35 shadow-[var(--shadow-sm)]">
         {primaryImage ? (
-          <Image src={primaryImage} alt={productName} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-contain p-8" />
+          <Image src={primaryImage} alt={productName} fill preload={selected === 0} sizes="(min-width: 1440px) 42rem, (min-width: 1024px) 52vw, 100vw" className="object-contain p-5 sm:p-8" />
         ) : (
           <div className="flex flex-col items-center gap-4 px-6 text-center">
             <ImageIcon className="size-20" strokeWidth={1.2} aria-hidden="true" />
@@ -24,7 +24,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
           </div>
         )}
       </div>
-      {images.length > 1 && <div className="mt-4 flex gap-3 overflow-x-auto pb-2" role="list" aria-label="Изображения товара">{images.map((src,index)=><button key={src} type="button" onClick={()=>setSelected(index)} aria-label={`Показать изображение ${index+1}`} aria-pressed={index===selected} className={`relative size-20 shrink-0 overflow-hidden rounded-md border bg-[#f1f4f1] focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-primary/25 ${index===selected?"border-primary":"border-border"}`}><Image src={src} alt={`${productName}, изображение ${index+1}`} fill sizes="80px" className="object-contain p-1"/></button>)}</div>}
+      {images.length > 1 && <div className="mt-4 flex gap-3 overflow-x-auto pb-2" role="list" aria-label="Изображения товара">{images.map((src,index)=><button key={src} type="button" onClick={()=>setSelected(index)} aria-label={`Показать изображение ${index+1} из ${images.length}`} aria-pressed={index===selected} className={`relative size-20 shrink-0 overflow-hidden rounded-[var(--radius-md)] border-2 bg-white transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-primary/25 ${index===selected?"border-primary":"border-border hover:border-primary/45"}`}><Image src={src} alt="" fill sizes="80px" className="object-contain p-1.5"/></button>)}</div>}
     </div>
   );
 }

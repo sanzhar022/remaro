@@ -9,4 +9,4 @@ export const adminProductSchema = z.object({
   price: z.coerce.number().int().nonnegative(), oldPrice: optionalInt, stock: z.coerce.number().int().nonnegative(), unit: z.string().trim().min(1),
   rating: z.coerce.number().min(0).max(5), reviewCount: z.coerce.number().int().nonnegative(),
   isPopular: z.boolean(), isNew: z.boolean(), isHit: z.boolean(), specifications: z.array(productSpecificationSchema).max(50),
-});
+}).superRefine((data,ctx)=>{const names=new Set<string>();for(const [index,spec] of data.specifications.entries()){const key=spec.name.toLocaleLowerCase("ru");if(names.has(key))ctx.addIssue({code:"custom",path:["specifications",index,"name"],message:"Названия характеристик не должны повторяться"});names.add(key)}});

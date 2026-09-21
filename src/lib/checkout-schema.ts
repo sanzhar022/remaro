@@ -1,12 +1,18 @@
 import { z } from "zod";
 
 const optionalText = z.string().trim().optional();
+export function normalizeKazakhstanPhone(phone: string) {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length === 11 && (digits.startsWith("7") || digits.startsWith("8"))) return `+7${digits.slice(1)}`;
+  if (digits.length === 10) return `+7${digits}`;
+  return null;
+}
 
 export const checkoutSchema = z.object({
   firstName: z.string().trim().min(1, "Введите имя"),
   lastName: z.string().trim().min(1, "Введите фамилию"),
   phone: z.string().trim().min(1, "Введите телефон").refine(
-    (phone) => phone.replace(/\D/g, "").length >= 10,
+    (phone) => normalizeKazakhstanPhone(phone) !== null,
     "Введите корректный номер телефона",
   ),
   email: z.string().trim().refine(
@@ -23,9 +29,6 @@ export const checkoutSchema = z.object({
   paymentMethod: z.enum(["card", "kaspi", "cash"]),
   privacyAccepted: z.boolean().refine((accepted) => accepted, "Необходимо согласие на обработку данных"),
 }).superRefine((data, context) => {
-  if (data.city.trim().toLocaleLowerCase("ru-KZ") !== "алматы") {
-    context.addIssue({ code: "custom", path: ["city"], message: "Сейчас доставка и самовывоз доступны только в Алматы" });
-  }
   if (data.deliveryMethod === "delivery" && !data.address?.trim()) {
     context.addIssue({ code: "custom", path: ["address"], message: "Введите адрес доставки" });
   }

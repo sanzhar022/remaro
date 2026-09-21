@@ -1,4 +1,5 @@
 import type { DeliveryMethod, DeliveryStatus, OrderStatus, PaymentMethod, PaymentStatus } from "@/generated/prisma/client";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { formatPrice } from "@/lib/format";
 import { formatDeliveryMethod, formatDeliveryStatus, formatOrderStatus, formatPaymentMethod, formatPaymentStatus } from "@/lib/order-status";
@@ -11,10 +12,14 @@ interface OrderDetailsProps {
     firstName: string;
     lastName: string;
     phone: string;
+    email?: string | null;
     deliveryMethod: DeliveryMethod;
     city: string;
     address: string | null;
     apartment: string | null;
+    entrance?: string | null;
+    floor?: string | null;
+    comment?: string | null;
     paymentMethod: PaymentMethod;
     paymentStatus: PaymentStatus;
     deliveryStatus: DeliveryStatus;
@@ -30,6 +35,7 @@ interface OrderDetailsProps {
       quantity: number;
       totalPrice: number;
       unit: string;
+      product?: { images: Array<{url:string;alt:string|null}> } | null;
     }>;
   };
   compactHeader?: boolean;
@@ -38,7 +44,7 @@ interface OrderDetailsProps {
 export function OrderDetails({ order, compactHeader = false }: OrderDetailsProps) {
   const address = order.deliveryMethod === "PICKUP"
     ? "Магазин Remaro"
-    : [order.city, order.address, order.apartment && `кв./офис ${order.apartment}`].filter(Boolean).join(", ");
+    : [order.city, order.address, order.apartment && `кв./офис ${order.apartment}`,order.entrance&&`подъезд ${order.entrance}`,order.floor&&`этаж ${order.floor}`].filter(Boolean).join(", ");
 
   return (
     <div className="space-y-6">
@@ -48,26 +54,28 @@ export function OrderDetails({ order, compactHeader = false }: OrderDetailsProps
         <Info label="Дата" value={new Intl.DateTimeFormat("ru-KZ", { dateStyle: "long", timeStyle: "short" }).format(order.createdAt)} />
         <Info label="Получатель" value={`${order.firstName} ${order.lastName}`} />
         <Info label="Телефон" value={order.phone} />
+        {order.email&&<Info label="Email" value={order.email}/>}
         <Info label="Получение" value={`${formatDeliveryMethod(order.deliveryMethod)} · ${address}`} />
         <Info label="Оплата" value={formatPaymentMethod(order.paymentMethod)} />
         <div><dt className="text-sm text-muted">Статус оплаты</dt><dd className="mt-1"><Badge variant={order.paymentStatus === "PAID" ? "success" : "neutral"}>{formatPaymentStatus(order.paymentStatus)}</Badge></dd></div>
         <div><dt className="text-sm text-muted">Статус доставки</dt><dd className="mt-1"><Badge variant={order.deliveryStatus === "DELIVERED" ? "success" : "neutral"}>{formatDeliveryStatus(order.deliveryStatus)}</Badge></dd></div>
         {order.trackingNumber && <Info label="Трек-номер" value={order.trackingNumber} />}
+        {order.comment&&<Info label="Комментарий" value={order.comment}/>}
       </dl>
 
       <section className="rounded-[var(--radius-lg)] border border-border bg-surface p-5 shadow-[var(--shadow-sm)] sm:p-7">
         <h2 className="type-h2">Товары</h2>
         <ul className="mt-5 divide-y divide-border">
           {order.items.map((item) => (
-            <li key={item.id} className="flex flex-col justify-between gap-2 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-center">
-              <div><p className="font-bold">{item.productName}</p><p className="type-small mt-1 text-muted">Артикул: {item.sku} · {item.quantity} × {formatPrice(item.unitPrice)} / {item.unit}</p></div>
+            <li key={item.id} className="flex flex-col justify-between gap-3 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-center">
+              <div className="flex min-w-0 items-center gap-3">{item.product?.images[0]?<div className="relative size-16 shrink-0 overflow-hidden rounded-md bg-secondary"><Image src={item.product.images[0].url} alt={item.product.images[0].alt??item.productName} fill sizes="64px" className="object-contain"/></div>:<div className="grid size-16 shrink-0 place-items-center rounded-md bg-secondary px-1 text-center text-[9px] leading-tight text-muted">Изображение товара недоступно</div>}<div><p className="font-bold">{item.productName}</p><p className="type-small mt-1 text-muted">Артикул: {item.sku} · {item.quantity} × {formatPrice(item.unitPrice)} / {item.unit}</p></div></div>
               <p className="shrink-0 font-bold">{formatPrice(item.totalPrice)}</p>
             </li>
           ))}
         </ul>
         <dl className="ml-auto mt-6 max-w-sm space-y-3 border-t border-border pt-5 text-sm">
           <Total label="Товары" value={formatPrice(order.subtotal)} />
-          <Total label="Доставка" value={formatPrice(order.deliveryPrice)} />
+          <Total label="Доставка" value={order.deliveryMethod==="DELIVERY"&&order.deliveryPrice===0?"Уточняется при подтверждении":formatPrice(order.deliveryPrice)} />
           <Total label="Итого" value={formatPrice(order.total)} emphasized />
         </dl>
       </section>

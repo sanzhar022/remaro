@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { ActiveProductFilters } from "@/components/filters/active-product-filters";
 import { ClearFiltersButton, ProductFilters } from "@/components/filters/product-filters";
 import { ProductSortSelect } from "@/components/filters/product-sort";
 import { ProductGrid } from "@/components/product/product-grid";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Section } from "@/components/ui/section";
 import { formatProductCount } from "@/lib/format";
 import { filterProducts, getAvailableBrands, getPriceRange, parseProductFilters, sortProducts } from "@/lib/product-filters";
@@ -29,9 +31,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
 
   return (
     <Section>
-      <nav aria-label="Хлебные крошки" className="type-small mb-6 flex items-center gap-2 text-muted">
-        <Link href="/" className="hover:text-primary">Главная</Link><span aria-hidden="true">/</span><span aria-current="page" className="text-foreground">Поиск</span>
-      </nav>
+      <Breadcrumbs items={[{ label: "Главная", href: "/" }, { label: "Поиск" }]} />
       <header className="mb-10">
         <h1 className="type-h1">Результаты поиска</h1>
         {searchQuery && <p className="mt-4 text-muted">По запросу «{searchQuery}» найдено: {formatProductCount(results.length)}</p>}
@@ -50,6 +50,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               <p className="font-semibold text-muted">{formatProductCount(results.length)}</p>
               <Suspense fallback={<div className="h-11 w-48 rounded-[var(--radius-md)] bg-secondary" />}><ProductSortSelect /></Suspense>
             </div>
+            <Suspense><ActiveProductFilters /></Suspense>
             {results.length > 0 ? <ProductGrid products={results} /> : (
               <div className="rounded-[var(--radius-lg)] border border-border bg-surface p-8 text-center shadow-[var(--shadow-sm)]">
                 <h2 className="type-h2">Ничего не найдено</h2><p className="mt-3 text-muted">Попробуйте изменить параметры фильтрации.</p><Suspense><ClearFiltersButton className="mt-5" /></Suspense>
@@ -61,6 +62,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
         <div className="rounded-[var(--radius-lg)] border border-border bg-surface p-8 text-center shadow-[var(--shadow-sm)]">
           <h2 className="type-h2">По запросу «{searchQuery}» ничего не найдено</h2>
           <p className="mt-3 text-muted">Проверьте написание или попробуйте другой запрос.</p>
+          <Link href="/catalog" className="mt-5 inline-flex min-h-11 items-center rounded-[var(--radius-md)] bg-primary px-4 font-semibold text-[var(--navy-950)] hover:bg-primary-hover">Перейти в каталог</Link>
         </div>
       )}
     </Section>

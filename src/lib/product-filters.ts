@@ -69,7 +69,10 @@ export function sortProducts(productList: readonly Product[], sort: ProductSort 
 }
 
 export function getAvailableBrands(productList: readonly Product[]): string[] {
-  return [...new Set(productList.map((product) => product.brand))].sort((a, b) => a.localeCompare(b, "ru"));
+  return [...new Set(productList
+    .map((product) => product.brand)
+    .filter((brand): brand is string => typeof brand === "string" && brand.trim().length > 0))]
+    .sort((a, b) => a.localeCompare(b, "ru"));
 }
 
 export function getPriceRange(productList: readonly Product[]): { min: number; max: number } {

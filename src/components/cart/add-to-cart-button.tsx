@@ -8,15 +8,16 @@ import type { Product } from "@/types/product";
 export interface AddToCartButtonProps extends Omit<ButtonProps, "onClick" | "disabled"> {
   product: Product;
   quantity?: number;
+  onAdded?: () => void;
 }
 
-export function AddToCartButton({ product, quantity = 1, children, ...props }: AddToCartButtonProps) {
+export function AddToCartButton({ product, quantity = 1, onAdded, children, ...props }: AddToCartButtonProps) {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
     <Button
       disabled={product.stock <= 0}
-      onClick={() => addItem(product, quantity)}
+      onClick={() => { addItem(product, quantity); onAdded?.(); }}
       aria-label={`Добавить в корзину: ${product.name}`}
       {...props}
     >

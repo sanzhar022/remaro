@@ -66,6 +66,7 @@ export type OrderMinAggregateOutputType = {
   subtotal: number | null
   deliveryPrice: number | null
   total: number | null
+  stockReserved: boolean | null
   status: $Enums.OrderStatus | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -99,6 +100,7 @@ export type OrderMaxAggregateOutputType = {
   subtotal: number | null
   deliveryPrice: number | null
   total: number | null
+  stockReserved: boolean | null
   status: $Enums.OrderStatus | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -132,6 +134,7 @@ export type OrderCountAggregateOutputType = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved: number
   status: number
   createdAt: number
   updatedAt: number
@@ -179,6 +182,7 @@ export type OrderMinAggregateInputType = {
   subtotal?: true
   deliveryPrice?: true
   total?: true
+  stockReserved?: true
   status?: true
   createdAt?: true
   updatedAt?: true
@@ -212,6 +216,7 @@ export type OrderMaxAggregateInputType = {
   subtotal?: true
   deliveryPrice?: true
   total?: true
+  stockReserved?: true
   status?: true
   createdAt?: true
   updatedAt?: true
@@ -245,6 +250,7 @@ export type OrderCountAggregateInputType = {
   subtotal?: true
   deliveryPrice?: true
   total?: true
+  stockReserved?: true
   status?: true
   createdAt?: true
   updatedAt?: true
@@ -365,6 +371,7 @@ export type OrderGroupByOutputType = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved: boolean
   status: $Enums.OrderStatus
   createdAt: Date
   updatedAt: Date
@@ -421,6 +428,7 @@ export type OrderWhereInput = {
   subtotal?: Prisma.IntFilter<"Order"> | number
   deliveryPrice?: Prisma.IntFilter<"Order"> | number
   total?: Prisma.IntFilter<"Order"> | number
+  stockReserved?: Prisma.BoolFilter<"Order"> | boolean
   status?: Prisma.EnumOrderStatusFilter<"Order"> | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFilter<"Order"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Order"> | Date | string
@@ -456,6 +464,7 @@ export type OrderOrderByWithRelationInput = {
   subtotal?: Prisma.SortOrder
   deliveryPrice?: Prisma.SortOrder
   total?: Prisma.SortOrder
+  stockReserved?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -494,6 +503,7 @@ export type OrderWhereUniqueInput = Prisma.AtLeast<{
   subtotal?: Prisma.IntFilter<"Order"> | number
   deliveryPrice?: Prisma.IntFilter<"Order"> | number
   total?: Prisma.IntFilter<"Order"> | number
+  stockReserved?: Prisma.BoolFilter<"Order"> | boolean
   status?: Prisma.EnumOrderStatusFilter<"Order"> | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFilter<"Order"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Order"> | Date | string
@@ -529,6 +539,7 @@ export type OrderOrderByWithAggregationInput = {
   subtotal?: Prisma.SortOrder
   deliveryPrice?: Prisma.SortOrder
   total?: Prisma.SortOrder
+  stockReserved?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -570,6 +581,7 @@ export type OrderScalarWhereWithAggregatesInput = {
   subtotal?: Prisma.IntWithAggregatesFilter<"Order"> | number
   deliveryPrice?: Prisma.IntWithAggregatesFilter<"Order"> | number
   total?: Prisma.IntWithAggregatesFilter<"Order"> | number
+  stockReserved?: Prisma.BoolWithAggregatesFilter<"Order"> | boolean
   status?: Prisma.EnumOrderStatusWithAggregatesFilter<"Order"> | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Order"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Order"> | Date | string
@@ -602,6 +614,7 @@ export type OrderCreateInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -637,6 +650,7 @@ export type OrderUncheckedCreateInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -670,6 +684,7 @@ export type OrderUpdateInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -705,6 +720,7 @@ export type OrderUncheckedUpdateInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -739,6 +755,7 @@ export type OrderCreateManyInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -771,6 +788,7 @@ export type OrderUpdateManyMutationInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -804,6 +822,7 @@ export type OrderUncheckedUpdateManyInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -847,6 +866,7 @@ export type OrderCountOrderByAggregateInput = {
   subtotal?: Prisma.SortOrder
   deliveryPrice?: Prisma.SortOrder
   total?: Prisma.SortOrder
+  stockReserved?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -886,6 +906,7 @@ export type OrderMaxOrderByAggregateInput = {
   subtotal?: Prisma.SortOrder
   deliveryPrice?: Prisma.SortOrder
   total?: Prisma.SortOrder
+  stockReserved?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -919,6 +940,7 @@ export type OrderMinOrderByAggregateInput = {
   subtotal?: Prisma.SortOrder
   deliveryPrice?: Prisma.SortOrder
   total?: Prisma.SortOrder
+  stockReserved?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -1038,6 +1060,7 @@ export type OrderCreateWithoutUserInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1071,6 +1094,7 @@ export type OrderUncheckedCreateWithoutUserInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1134,6 +1158,7 @@ export type OrderScalarWhereInput = {
   subtotal?: Prisma.IntFilter<"Order"> | number
   deliveryPrice?: Prisma.IntFilter<"Order"> | number
   total?: Prisma.IntFilter<"Order"> | number
+  stockReserved?: Prisma.BoolFilter<"Order"> | boolean
   status?: Prisma.EnumOrderStatusFilter<"Order"> | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFilter<"Order"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Order"> | Date | string
@@ -1166,6 +1191,7 @@ export type OrderCreateWithoutItemsInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1200,6 +1226,7 @@ export type OrderUncheckedCreateWithoutItemsInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1248,6 +1275,7 @@ export type OrderUpdateWithoutItemsInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1282,6 +1310,7 @@ export type OrderUncheckedUpdateWithoutItemsInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1314,6 +1343,7 @@ export type OrderCreateManyUserInput = {
   subtotal: number
   deliveryPrice: number
   total: number
+  stockReserved?: boolean
   status?: $Enums.OrderStatus
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -1346,6 +1376,7 @@ export type OrderUpdateWithoutUserInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1379,6 +1410,7 @@ export type OrderUncheckedUpdateWithoutUserInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1412,6 +1444,7 @@ export type OrderUncheckedUpdateManyWithoutUserInput = {
   subtotal?: Prisma.IntFieldUpdateOperationsInput | number
   deliveryPrice?: Prisma.IntFieldUpdateOperationsInput | number
   total?: Prisma.IntFieldUpdateOperationsInput | number
+  stockReserved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   status?: Prisma.EnumOrderStatusFieldUpdateOperationsInput | $Enums.OrderStatus
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1476,6 +1509,7 @@ export type OrderSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   subtotal?: boolean
   deliveryPrice?: boolean
   total?: boolean
+  stockReserved?: boolean
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -1512,6 +1546,7 @@ export type OrderSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   subtotal?: boolean
   deliveryPrice?: boolean
   total?: boolean
+  stockReserved?: boolean
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -1546,6 +1581,7 @@ export type OrderSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   subtotal?: boolean
   deliveryPrice?: boolean
   total?: boolean
+  stockReserved?: boolean
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
@@ -1580,12 +1616,13 @@ export type OrderSelectScalar = {
   subtotal?: boolean
   deliveryPrice?: boolean
   total?: boolean
+  stockReserved?: boolean
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type OrderOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "orderNumber" | "accessToken" | "userId" | "firstName" | "lastName" | "email" | "phone" | "deliveryMethod" | "city" | "address" | "apartment" | "entrance" | "floor" | "comment" | "paymentMethod" | "paymentStatus" | "deliveryStatus" | "paidAt" | "deliveredAt" | "trackingNumber" | "paymentProvider" | "paymentReference" | "paymentRedirectUrl" | "subtotal" | "deliveryPrice" | "total" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["order"]>
+export type OrderOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "orderNumber" | "accessToken" | "userId" | "firstName" | "lastName" | "email" | "phone" | "deliveryMethod" | "city" | "address" | "apartment" | "entrance" | "floor" | "comment" | "paymentMethod" | "paymentStatus" | "deliveryStatus" | "paidAt" | "deliveredAt" | "trackingNumber" | "paymentProvider" | "paymentReference" | "paymentRedirectUrl" | "subtotal" | "deliveryPrice" | "total" | "stockReserved" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["order"]>
 export type OrderInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   user?: boolean | Prisma.Order$userArgs<ExtArgs>
   items?: boolean | Prisma.Order$itemsArgs<ExtArgs>
@@ -1632,6 +1669,7 @@ export type $OrderPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     subtotal: number
     deliveryPrice: number
     total: number
+    stockReserved: boolean
     status: $Enums.OrderStatus
     createdAt: Date
     updatedAt: Date
@@ -2087,6 +2125,7 @@ export interface OrderFieldRefs {
   readonly subtotal: Prisma.FieldRef<"Order", 'Int'>
   readonly deliveryPrice: Prisma.FieldRef<"Order", 'Int'>
   readonly total: Prisma.FieldRef<"Order", 'Int'>
+  readonly stockReserved: Prisma.FieldRef<"Order", 'Boolean'>
   readonly status: Prisma.FieldRef<"Order", 'OrderStatus'>
   readonly createdAt: Prisma.FieldRef<"Order", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Order", 'DateTime'>

@@ -13,7 +13,7 @@ import { useCartStore } from "@/store/cart-store";
 import type { CheckoutFormData, DeliveryMethod } from "@/types/checkout";
 import type { CreateOrderResponse, OrderApiError } from "@/types/order";
 
-export function CheckoutContent() {
+export function CheckoutContent({initialValues}:{initialValues?:Partial<CheckoutFormData>}) {
   const router = useRouter();
   const hasMounted = useHasMounted();
   const items = useCartStore((state) => state.items);
@@ -61,7 +61,7 @@ export function CheckoutContent() {
 
   return (
     <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
-      <CheckoutForm onSubmit={submitOrder} onDeliveryMethodChange={setDeliveryMethod} submitError={submitError} />
+      <CheckoutForm onSubmit={submitOrder} onDeliveryMethodChange={setDeliveryMethod} submitError={submitError} initialValues={initialValues} />
       <CheckoutSummary items={items} deliveryMethod={deliveryMethod} />
     </div>
   );

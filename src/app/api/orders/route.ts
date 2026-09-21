@@ -2,13 +2,17 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { createOrderRequestSchema } from "@/lib/order-schema";
 import { createOrder, OrderCreationError } from "@/lib/orders";
-import { rateLimiter, rateLimitKey } from "@/lib/rate-limit";
+import { checkRateLimit, rateLimitHeaders, rateLimitKey } from "@/lib/rate-limit";
 import { isSameOrigin } from "@/lib/request-security";
 
 export async function POST(request: Request) {
   try {
     if (!isSameOrigin(request)) return NextResponse.json({ error: "Недопустимый источник запроса.", code: "VALIDATION" }, { status: 403 });
-    if (!(await rateLimiter.check(rateLimitKey(request, "orders"))).allowed) return NextResponse.json({ error: "Слишком много запросов.", code: "VALIDATION" }, { status: 429 });
+    const limit = await checkRateLimit("orders", rateLimitKey(request, "orders"));
+    if (!limit.allowed) return NextResponse.json(
+      { error: limit.reason === "limit" ? "Слишком много запросов. Попробуйте позже." : "Оформление заказов временно недоступно. Попробуйте позже.", code: "VALIDATION" },
+      { status: limit.reason === "limit" ? 429 : 503, headers: rateLimitHeaders(limit) },
+    );
     const payload: unknown = await request.json();
     const parsed = createOrderRequestSchema.safeParse(payload);
     if (!parsed.success) {
