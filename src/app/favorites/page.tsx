@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/section";
 export const metadata: Metadata = {
   title: "Избранное",
   description: "Сохранённые товары в интернет-магазине Remaro.",
+  robots: { index: false, follow: false },
 };
 
 export default function FavoritesPage() {

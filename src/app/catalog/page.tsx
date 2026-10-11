@@ -8,6 +8,7 @@ import { getRootCategories } from "@/lib/categories";
 export const metadata: Metadata = {
   title: "Каталог товаров",
   description: "Всё необходимое для строительства, ремонта и обустройства дома в каталоге Remaro.",
+  alternates: { canonical: "/catalog" },
 };
 
 export default async function CatalogPage() {

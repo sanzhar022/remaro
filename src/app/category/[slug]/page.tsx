@@ -39,6 +39,7 @@ export async function generateMetadata({ params, searchParams }: CategoryPagePro
     alternates: { canonical: `/category/${category.slug}` },
     robots: Object.values(query).some((value) => value !== undefined) ? { index: false, follow: true } : undefined,
     openGraph: { type: "website", url: absoluteUrl(`/category/${category.slug}`), title: `${category.name} | Remaro`, description: category.description ?? `${category.name} в каталоге Remaro.`, images: category.image ? [category.image] : undefined },
+    twitter: { card: "summary_large_image", title: `${category.name} | Remaro`, description: category.description ?? `Каталог товаров «${category.name}» в Remaro.`, images: category.image ? [category.image] : undefined },
   };
 }
 

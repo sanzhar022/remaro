@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/section";
 export const metadata: Metadata = {
   title: "Корзина",
   description: "Товары, добавленные в корзину Remaro.",
+  robots: { index: false, follow: false },
 };
 
 export default function CartPage() {

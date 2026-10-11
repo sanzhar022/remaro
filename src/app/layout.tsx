@@ -9,12 +9,11 @@ const montserrat = Montserrat({ subsets: ["latin", "cyrillic"], variable: "--fon
 
 export const metadata: Metadata = {
   title: { default: "Remaro — строительные материалы", template: "%s | Remaro" },
-  description: "Строительные и отделочные материалы Remaro с доставкой и самовывозом в Алматы.",
+  description: "Строительные материалы для вашего проекта. Качественные материалы по выгодным ценам с доставкой и самовывозом в Алматы.",
   applicationName: "Remaro",
   metadataBase: new URL(siteUrl),
-  alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "ru_KZ", siteName: "Remaro", url: absoluteUrl("/"), title: "Remaro — строительные материалы", description: "Материалы для строительства и ремонта в Алматы." },
-  twitter: { card: "summary_large_image", title: "Remaro — строительные материалы", description: "Материалы для строительства и ремонта в Алматы." },
+  openGraph: { type: "website", locale: "ru_KZ", siteName: "Remaro", url: absoluteUrl("/"), title: "Remaro — строительные материалы", description: "Строительные материалы для вашего проекта с доставкой и самовывозом в Алматы." },
+  twitter: { card: "summary_large_image", title: "Remaro — строительные материалы", description: "Строительные материалы для вашего проекта с доставкой и самовывозом в Алматы." },
   robots: { index: true, follow: true },
 };
 
@@ -22,6 +21,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru-KZ">
       <body className={`${montserrat.variable} flex min-h-screen flex-col`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Remaro",
+              url: absoluteUrl("/"),
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -8,7 +8,7 @@ import { getMapUrl, getSiteSettings, getWhatsAppUrl } from "@/lib/site-settings"
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
-  return { title: { absolute: "Контакты | REMARO" }, description: `Контактная информация ${settings.companyName}: телефон, WhatsApp, адрес и режим работы.` };
+  return { title: { absolute: "Контакты | REMARO" }, description: `Контактная информация ${settings.companyName}: телефон, WhatsApp, адрес и режим работы.`, alternates: { canonical: "/contacts" } };
 }
 
 export default async function ContactsPage() {

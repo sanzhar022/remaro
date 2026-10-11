@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     description: description?.slice(0, 160),
     alternates: { canonical: `/product/${product.slug}` },
     openGraph: { type: "website", url: absoluteUrl(`/product/${product.slug}`), title: `${product.name} — Remaro`, description: description?.slice(0, 160), images: product.images[0] ? [product.images[0]] : undefined },
+    twitter: { card: "summary_large_image", title: `${product.name} — Remaro`, description: description?.slice(0, 160), images: product.images[0] ? [product.images[0]] : undefined },
   };
 }
 

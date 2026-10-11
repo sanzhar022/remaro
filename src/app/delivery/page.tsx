@@ -11,6 +11,7 @@ import { paymentsEnabled } from "@/lib/payment-service";
 export const metadata: Metadata = {
   title: "Доставка и оплата",
   description: "Способы доставки, самовывоза и оплаты заказов Remaro в Алматы.",
+  alternates: { canonical: "/delivery" },
 };
 
 const deliveryOptions = [

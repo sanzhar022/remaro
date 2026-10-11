@@ -11,7 +11,7 @@ import { getSiteSettings } from "@/lib/site-settings";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
-  return { title: { absolute: "О компании | REMARO" }, description: settings.shortDescription || "О компании REMARO." };
+  return { title: { absolute: "О компании | REMARO" }, description: settings.shortDescription || "О компании REMARO.", alternates: { canonical: "/about" } };
 }
 
 const advantages = [

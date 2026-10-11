@@ -11,6 +11,11 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { getFeaturedCategories } from "@/lib/categories";
 import { companyInfo } from "@/lib/company-info";
 import { getPopularProducts } from "@/lib/products";
+import { absoluteUrl } from "@/lib/site";
+
+export const metadata = {
+  alternates: { canonical: absoluteUrl("/") },
+};
 
 const benefits = [
   { icon: ShieldCheck, title: "Гарантия качества", text: "Только проверенные поставщики" },
