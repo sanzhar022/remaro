@@ -24,7 +24,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link href={`/product/${product.slug}`} aria-label={`Открыть товар: ${product.name}`} className="block focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-primary/25">
           <div className="relative grid aspect-square place-items-center bg-[#f3f4f6] text-[var(--navy-900)]/35">
             {product.images[0] ? (
-              <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 375px) 50vw, 100vw" className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]" />
+              <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 375px) 50vw, 100vw" unoptimized className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]" />
             ) : (
               <div className="flex max-w-44 flex-col items-center px-4 text-center"><ImageIcon className="size-10" strokeWidth={1.35} aria-hidden="true" /><span className="mt-3 text-xs font-semibold leading-5 text-muted">Изображение товара<br />скоро появится</span></div>
             )}
